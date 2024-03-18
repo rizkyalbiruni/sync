@@ -1,0 +1,2 @@
+class DialGuessesController < ApplicationController
+end

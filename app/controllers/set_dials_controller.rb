@@ -1,0 +1,2 @@
+class SetDialsController < ApplicationController
+end
