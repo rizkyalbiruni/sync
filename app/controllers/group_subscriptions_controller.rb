@@ -1,0 +1,2 @@
+class GroupSubscriptionsController < ApplicationController
+end
