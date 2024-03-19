@@ -1,2 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div data-controller="instructions">
+<button data-action="click->instructions#reveal" class="btn btn-outline-primary">How it works</button>
+<div data-instructions-target="revealInstructions" class="d-none">
+  <%= render "instructions" %>
+</div>
+</div>
