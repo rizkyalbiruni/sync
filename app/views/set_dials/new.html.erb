@@ -1,11 +1,21 @@
 
 
-<p> <%= Topic.find(@dial.topic_id).topic%> </p>
+<p> <%= Topic.find(@dial.topic_id).topic %> </p>
 
 
-<div id="dial">
+
+<div id="dial" data_controller="set_the_dial">
+<button data-action="click->instructions#reveal" class="btn btn-outline-primary">Set the dial</button>
+<div data-set_the_dial-target="revealInstructions" class="d-none">
+  <%= render "instructions" %>
+</div>
+  <p> Set the dial </p>
 <%= @setter_value %>
 </div>
+
+
+
+
 
 <h2> <%= @dial.left %> <--------> <%= @dial.right %> </h2>
 
