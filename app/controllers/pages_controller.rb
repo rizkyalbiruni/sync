@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @group = Group.new
+    @topics = Topic.all
   end
 end
