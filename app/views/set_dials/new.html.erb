@@ -4,17 +4,14 @@
 
 
 
-<div id="dial" data_controller="set_the_dial">
-<button data-action="click->instructions#reveal" class="btn btn-outline-primary">Set the dial</button>
-<div data-set_the_dial-target="revealInstructions" class="d-none">
-  <%= render "instructions" %>
-</div>
-  <p> Set the dial </p>
-<%= @setter_value %>
+<div data-controller="setdial">
+<button data-action="click->setdial#set" class="btn btn-outline-primary">Set the dial</button>
+
+<div data-setdial-target="setterValue" class="d-none">
+  <%=@setter_value %>
 </div>
 
-
-
+</div>
 
 
 <h2> <%= @dial.left %> <--------> <%= @dial.right %> </h2>
