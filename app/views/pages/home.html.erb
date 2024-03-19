@@ -17,7 +17,7 @@
 <%# this below is button to create group %>
 <div data-controller="toggle" class="mt-5">
   <button class="btn btn-outline-primary"
-  data-action="click->toggle#fire">Create a Game</button>
+  data-action="click->toggle#fire">Create a Group</button>
   <div data-toggle-target="createGroup" class="d-none">
   <%= simple_form_for(@group) do |f| %>
   <%= f.input :name %>
@@ -26,4 +26,22 @@
 <% end %>
 </div>
 <%# this above is button to create group %>
+
+<% if current_user %>
+  <div class="justify-content-center d-flex">
+    <ul>
+      <% @groups.each do |group| %>
+      <li><%= group.name %></li>
+      <% group.users.each do |user|%>
+      <p>players :<%= user.name %></p>
+      <% end %>
+      <%= link_to "Start Game", group_games_path(group), data: {turbo_method: :post} %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
+<%# ADD topics to game start!!!! _topics.html.erb %>
 
