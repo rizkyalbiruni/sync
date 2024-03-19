@@ -8,3 +8,10 @@
   From inside jokes to shared adventures, this app measures your camaraderie quotient with accuracy and humor.
   Get ready to laugh, reflect, and maybe even learn a thing or two about your besties with AmigoAnalyzer!
   </p>
+
+<div data-controller="instructions">
+<button data-action="click->instructions#reveal" class="btn btn-outline-primary">How it works</button>
+<div data-instructions-target="revealInstructions" class="d-none">
+  <%= render "instructions" %>
+</div>
+</div>
