@@ -1,2 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+<%# this below is button to create group %>
+<div data-controller="toggle" class="mt-5">
+  <button class="btn btn-outline-primary"
+  data-action="click->toggle#fire">Create a Game</button>
+  <div data-toggle-target="createGroup" class="d-none">
+  <%= simple_form_for(@group) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+  </div>
+<% end %>
+</div>
+<%# this above is button to create group %>
