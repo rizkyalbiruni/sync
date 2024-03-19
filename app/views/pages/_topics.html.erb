@@ -1,0 +1,8 @@
+<div class="topic-cards">
+  <% @topics.each do |topic| %>
+    <div class="topic-card">
+      <%= image_tag "topics/#{topic.topic.downcase}.jpg", class: "topic-image" %>
+      <h3><%= topic.topic.capitalize %></h3>
+    </div>
+  <% end %>
+</div>

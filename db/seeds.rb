@@ -9,6 +9,9 @@
 #   end
 # db/seeds.rb
 
+Dial.destroy_all
+Topic.destroy_all
+
 Topic.create(topic: 'Food')
 Topic.create(topic: 'Movies')
 Topic.create(topic: 'Hobbies')

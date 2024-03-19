@@ -10,3 +10,24 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.topic-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic-card {
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.topic-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

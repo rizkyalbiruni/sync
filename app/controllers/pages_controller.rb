@@ -5,5 +5,7 @@ class PagesController < ApplicationController
     @groups = current_user.groups if current_user
     @group = Group.new
     @game = Game.new
+    @topics = Topic.all
+
   end
 end
