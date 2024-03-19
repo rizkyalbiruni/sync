@@ -4,4 +4,10 @@ class User < ApplicationRecord
   validates :name, presence: true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :group_subscriptions
+  has_many :groups, through: :group_subscriptions
+  has_many :set_dials
+  has_many :dial_guesses
+
 end
