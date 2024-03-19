@@ -1,7 +1,5 @@
 <h1>Welcome to AmigoAnalyzer App!</h1>
 
-<p>This is the home page of your app.</p>
-
 <p>Welcome to AmigoAnalyzer.Ever wondered just how well you truly know your pals?
   AmigoAnalyzer dives deep into your social connections,
   serving up a hilarious yet revealing snapshot of your friendship.
@@ -15,3 +13,17 @@
   <%= render "instructions" %>
 </div>
 </div>
+
+<%# this below is button to create group %>
+<div data-controller="toggle" class="mt-5">
+  <button class="btn btn-outline-primary"
+  data-action="click->toggle#fire">Create a Game</button>
+  <div data-toggle-target="createGroup" class="d-none">
+  <%= simple_form_for(@group) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+  </div>
+<% end %>
+</div>
+<%# this above is button to create group %>
+
