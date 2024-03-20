@@ -7,4 +7,5 @@ class Group < ApplicationRecord
   has_many :users, through: :group_subscriptions
   has_many :games
   has_many :messages, dependent: :destroy
+  belongs_to :user, optional: true
 end

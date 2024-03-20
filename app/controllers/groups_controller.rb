@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   def create
     @groups = current_user.groups
     @group = Group.new(group_params)
+    @group.user = current_user
     if @group.save
       @group_subscription = GroupSubscription.new
       @group_subscription.user = current_user
