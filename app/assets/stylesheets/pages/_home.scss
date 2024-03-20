@@ -1,1 +1,64 @@
-// Specific CSS for your home-page
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  $body-font: "Work Sans", "Helvetica", "sans-serif";
+  font-size: $font-size-base;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+header.app-header {
+  text-align: center;
+  margin: 20px 0;
+
+  h1 {
+    $headers-font: "Nunito", "Helvetica", "sans-serif";
+    font-size: $font-size-large;
+    $blue: #0D6EFD;
+  }
+}
+
+main.app-content {
+  padding: 0 20px;
+
+  section.introduction {
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  section.how-it-works {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+
+    button {
+      font-size: $font-size-small;
+      background-color: transparent;
+      $orange: #E67E22;
+      border: 2px solid $primary-color;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:hover {
+        $gray: #0E0000;
+        color: #fff;
+      }
+    }
+  }
+
+
+}
+
+
+@media (max-width: 428px) {
+
+}
