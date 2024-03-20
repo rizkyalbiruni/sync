@@ -11,7 +11,7 @@
         <div data-controller="instructions">
             <button data-action="click->instructions#reveal" class="btn btn-outline-primary">How it works</button>
             <div data-instructions-target="revealInstructions" class="d-none">
-                <%= render "instructions" %>
+                <%= render "pages/instructions" %>
             </div>
         </div>
 
@@ -19,8 +19,26 @@
             <button class="btn btn-outline-primary" data-action="click->toggle#fire">Create a Group</button>
             <div data-toggle-target="createGroup" class="d-none">
                 <%= simple_form_for(@group) do |f| %>
-                <%= f.input :name %>
+                <%= f.input :name, label: 'Group Name' %>
+                Invitation Code <i class="fas fa-question-circle" data-bs-toggle="popover" title="Invite your friend via code"
+                data-bs-content="Must be 4 digits of capital letters"></i>
+                <%= f.input :code, label: false %>
                 <%= f.submit %>
+                <% end %>
+            </div>
+        </div>
+
+        <div data-controller="toggle" class="mt-5">
+            <button class="btn btn-outline-primary" data-action="click->toggle#fire">Join a Group</button>
+            <div data-toggle-target="createGroup" class="d-none">
+                <%= simple_form_for(@group_subscription) do |f| %>
+                Invitation Code <i class="fas fa-question-circle" data-bs-toggle="popover" title="Join your friend via code"
+                data-bs-content="Must be 4 digits of capital letters"></i>
+
+                <%= simple_fields_for :other do |o| %>
+                <%= o.input :code, label: false %>
+                <% end %>
+                <%= f.submit "Join the Group" %>
                 <% end %>
             </div>
         </div>
@@ -29,9 +47,14 @@
         <div class="justify-content-center d-flex">
             <ul>
                 <% @groups.each do |group| %>
-                <li><%= group.name %></li>
-                <% group.users.each do |user|%>
-                <p>players :<%= user.name %></p>
+                <li><%= group.name %><%= group.code %></li>
+                <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+                  <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
+                  <button class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy The Code</button>
+                </div>
+                <p>players :</p>
+                <% group.group_subscriptions.each do |gs|%>
+                <p><%= gs.user.name %></p>
                 <% end %>
                 <%= link_to "Start Game", group_games_path(group), data: {turbo_method: :post} %>
                 <% end %>

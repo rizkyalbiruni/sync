@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   def create
+    @groups = current_user.groups
     @group = Group.new(group_params)
     if @group.save
       @group_subscription = GroupSubscription.new
@@ -8,13 +9,13 @@ class GroupsController < ApplicationController
       @group_subscription.save
       redirect_to root_path
     else
-      render :new, status: :unprocessable_entity
+      render "pages/home", status: :unprocessable_entity
     end
   end
 
   private
 
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, :code)
   end
 end
