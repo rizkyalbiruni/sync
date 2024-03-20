@@ -12,10 +12,10 @@ end
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
   resources :groups, only: [:create] do
-    resources :group_subscriptions, only: [:create]
     resources :games, only: [:create]
   end
   resources :games, only: [:show]
+  resources :group_subscriptions, only: [:create]
   # Defines the root path route ("/")
   # root "posts#index"
 

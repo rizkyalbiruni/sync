@@ -9,5 +9,4 @@ class User < ApplicationRecord
   has_many :groups, through: :group_subscriptions
   has_many :set_dials
   has_many :dial_guesses
-
 end
