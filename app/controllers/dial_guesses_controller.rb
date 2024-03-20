@@ -1,6 +1,9 @@
 class DialGuessesController < ApplicationController
 
   def new
+    @set_dial = SetDial.find(params[:set_dial_id])
+    @dial = Dial.all.sample
+    @setter_value = rand(1..100)
 
   end
 
