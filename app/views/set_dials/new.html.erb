@@ -1,6 +1,6 @@
 
 
-<p> <%= Topic.find(@dial.topic_id).topic %> </p>
+<p> <%= @topic.topic %> </p>
 
 
 
@@ -18,7 +18,7 @@
 
 <p> Type your answer based on the dial place </p>
 
-<%= form_with model: @set_dial do |f| %>
+<%= form_with model:[@topic, @set_dial] do |f| %>
   <%= f.text_field :setter_word %>
   <br>
   <%= f.submit "Submit" %>

@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   resources :games, only: [:show]
   # Defines the root path route ("/")
   # root "posts#index"
-
+resources :topics, only: [:show] do
   resources :set_dials, only: [:new, :create] do
     resources :dial_guesses, only: [:new, :create]
   end
+end
 
 end

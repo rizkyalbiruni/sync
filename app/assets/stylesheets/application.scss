@@ -24,6 +24,11 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.topic-card:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
 }
 
 .topic-image {
