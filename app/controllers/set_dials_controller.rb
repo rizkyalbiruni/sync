@@ -1,8 +1,8 @@
 class SetDialsController < ApplicationController
   def new
     @set_dial = SetDial.new
-
-    @dial = Dial.all.sample
+    @topic = Topic.find(params[:topic_id])
+    @dial = @topic.dials.sample
     @setter_value = rand(1..100)
   end
 

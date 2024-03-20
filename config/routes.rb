@@ -18,10 +18,11 @@ end
   resources :group_subscriptions, only: [:create]
   # Defines the root path route ("/")
   # root "posts#index"
-
+resources :topics, only: [:show] do
   resources :set_dials, only: [:new, :create] do
     resources :dial_guesses, only: [:new, :create]
   end
+end
 
 
 end

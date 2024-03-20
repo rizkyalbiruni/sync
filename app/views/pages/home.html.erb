@@ -56,10 +56,24 @@
                 <% group.group_subscriptions.each do |gs|%>
                 <p><%= gs.user.name %></p>
                 <% end %>
-                <%= link_to "Start Game", group_games_path(group), data: {turbo_method: :post} %>
+
+
+          <div data-controller="topics" class="mt-5">
+              <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
+              <div data-topics-target="topicsMenu" class="d-none">
+                <%= render 'topics', group: group %>
+              </div>
+
+
+              
+
+
+          </div>
                 <% end %>
-            </ul>
+          </div>
         </div>
+            </ul>
+      </div>
         <% end %>
 
 
