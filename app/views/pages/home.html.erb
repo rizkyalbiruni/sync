@@ -9,14 +9,14 @@
         </section>
 
         <div data-controller="instructions">
-            <button data-action="click->instructions#reveal" class="btn btn-outline-primary">How it works</button>
+          <button data-action="click->instructions#reveal" class="btn btn-outline-primary">How it works</button>
             <div data-instructions-target="revealInstructions" class="d-none">
-                <%= render "pages/instructions" %>
+              <%= render "pages/instructions" %>
             </div>
         </div>
 
         <div data-controller="toggle" class="mt-5">
-            <button class="btn btn-outline-primary" data-action="click->toggle#fire">Create a Group</button>
+          <button class="btn btn-outline-primary" data-action="click->toggle#fire">Create a Group</button>
             <div data-toggle-target="createGroup" class="d-none">
                 <%= simple_form_for(@group) do |f| %>
                 <%= f.input :name, label: 'Group Name' %>
@@ -29,12 +29,11 @@
         </div>
 
         <div data-controller="toggle" class="mt-5">
-            <button class="btn btn-outline-primary" data-action="click->toggle#fire">Join a Group</button>
+          <button class="btn btn-outline-primary" data-action="click->toggle#fire">Join a Group</button>
             <div data-toggle-target="createGroup" class="d-none">
                 <%= simple_form_for(@group_subscription) do |f| %>
                 Invitation Code <i class="fas fa-question-circle" data-bs-toggle="popover" title="Join your friend via code"
                 data-bs-content="Must be 4 digits of capital letters"></i>
-
                 <%= simple_fields_for :other do |o| %>
                 <%= o.input :code, label: false %>
                 <% end %>
@@ -44,38 +43,31 @@
         </div>
 
         <% if current_user %>
-        <div class="justify-content-center d-flex">
+          <div class="justify-content-center d-flex">
             <ul>
-                <% @groups.each do |group| %>
-                <li><%= group.name %><%= group.code %></li>
+              <% @groups.each do |group| %>
+                <li><h2><%= group.name %></h2></li>
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
                   <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
                   <button class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy The Code</button>
                 </div>
+
                 <p>players :</p>
                 <% group.group_subscriptions.each do |gs|%>
-                <p><%= gs.user.name %></p>
+                  <p><%= gs.user.name %></p>
                 <% end %>
 
 
-          <div data-controller="topics" class="mt-5">
-              <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
-              <div data-topics-target="topicsMenu" class="d-none">
-                <%= render 'topics', group: group %>
-              </div>
-
-
-              
-
-
-          </div>
+                <% if group.user == current_user %>
+                  <div data-controller="topics" class="mt-5">
+                    <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
+                    <div data-topics-target="topicsMenu" class="d-none">
+                      <%= render 'topics', group: group %>
+                    </div>
+                  </div>
                 <% end %>
-          </div>
-        </div>
+              <% end %>
             </ul>
-      </div>
+          </div>
         <% end %>
-
-
-</div>
     </main>
