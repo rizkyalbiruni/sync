@@ -8,18 +8,18 @@
 <button data-action="click->setdial#set" class="btn btn-outline-primary">Set the dial</button>
 
 <div data-setdial-target="setterValue" class="d-none">
-  <%=@setter_value %>
+  <h1> <%=@setter_value %> </h1>
 </div>
 
 </div>
 
 
-<h2> <%= @dial.left %> <--------> <%= @dial.right %> </h2>
+<h2> <%= @dial.left %> (0) <--------> (100) <%= @dial.right %> </h2>
 
 <p> Type your answer based on the dial place </p>
 
 <%= form_with model: @set_dial do |f| %>
   <%= f.text_field :setter_word %>
   <br>
-  <%= f.submit %>
+  <%= f.submit "Submit" %>
 <% end %>
