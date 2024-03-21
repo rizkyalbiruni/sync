@@ -1,15 +1,15 @@
 class DialGuessesController < ApplicationController
 
   def new
-    @set_dial = SetDial.find(params[:set_dial_id])
-    @dial = Dial.all.sample
-    @setter_value = rand(1..100)
+    @user = current_user
+    @set_dial = SetDial.find(params[:id])
+    @dial_guess = DialGuess.new
 
   end
 
   def create
-    guess_params = params.require(:guess).permit(:guessed_value) # guess form has a field named guessed_value?
-    set_dial = @game.set_dials.find_by(user_id: current_user.id)
+    @guess_params = params.require(:guess).permit(:guessed_value) # guess form has a field named guessed_value?
+    @set_dial = @game.set_dials.find_by(user_id: current_user.id)
 
     @guess = set_dial.dial_guesses.build(user: current_user, guessed_value: guess_params[:guessed_value])
 
