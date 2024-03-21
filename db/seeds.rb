@@ -9,8 +9,13 @@
 #   end
 # db/seeds.rb
 
+
+DialGuess.destroy_all
+SetDial.destroy_all
+Game.destroy_all
 Dial.destroy_all
 Topic.destroy_all
+Group.destroy_all
 
 Topic.create(topic: 'Food')
 Topic.create(topic: 'Movies')
