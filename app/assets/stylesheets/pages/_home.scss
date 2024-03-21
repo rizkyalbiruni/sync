@@ -1,3 +1,41 @@
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header.app-header {
+  @include center-flex;
+  text-align: center;
+  margin: 20px 0;
+}
+  h1 {
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-size: 24px;
+    color: #040404;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 .animated-gradient-button {
   border: none;
@@ -13,7 +51,9 @@
   cursor: pointer;
   background: none;
   text-shadow: 3px 3px 10px rgba(0,0,0,.45);
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   &:before, &:after {
     position: absolute;
     top: 50%;
@@ -27,17 +67,14 @@
     background-size: 400% 400%;
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   }
-
   &:before {
     filter: blur(7px);
     transition: all .25s ease;
     animation: pulse 10s infinite ease;
   }
-
   &:after {
     filter: blur(0.3px);
   }
-
   &:hover {
     &:before {
       width: 115%;
@@ -46,39 +83,16 @@
   }
 }
 
-@keyframes pulse {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+
+.how-it-works-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-@mixin center-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  $body-font: "Work Sans", "Helvetica", "sans-serif";
-  font-size: $font-size-base;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-}
-
-header.app-header {
-  text-align: center;
-  margin: 20px 0;
-
-  h1 {
-    $headers-font: "Nunito", "Helvetica", "sans-serif";
-    font-size: $font-size-large;
-    $blue: #ffffff;
-  }
-}
-
-
-
-@media (max-width: 428px) {
-
+.create-group-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }

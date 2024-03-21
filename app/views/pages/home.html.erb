@@ -17,14 +17,14 @@
         </section>
 
         <div data-controller="instructions">
-            <button data-action="click->instructions#reveal" class="btn btn-outline-primary animated-gradient-button">How it works</button>
+            <button data-action="click->instructions#reveal" class="animated-gradient-button how-it-works-btn" aria-label="How it works"></button>
             <div data-instructions-target="revealInstructions" class="d-none">
                 <%= render "instructions" %>
             </div>
         </div>
 
         <div data-controller="toggle" class="mt-5">
-            <button data-action="click->toggle#fire" class="btn btn-outline-primary animated-gradient-button">Create a Group</button>
+            <button data-action="click->toggle#fire" class="animated-gradient-button create-group-btn">Create a Group</button>
             <div data-toggle-target="createGroup" class="d-none">
                 <%= simple_form_for(@group) do |f| %>
                 <%= f.input :name %>
