@@ -10,6 +10,7 @@
 
 
 <%# Display list of players %>
+<h1>Topic : <%= @game.topic.topic %></h1>
 <h2>Players:</h2>
 
 <ul>
@@ -20,5 +21,24 @@
 </ul>
 
 
-<%# Button to move to guess show page of other set_dials in the game %>
-<%# button_to "Next Guess", new_set_dial_dial_guess_path(@set_dial), method: :get %>
+<%# Display points scored for each guess %>
+<% if @points.present? %>
+  <p>Points scored for this guess: <%= @points %></p>
+<% end %>
+
+<%# Button to move to the next guess %>
+<%= button_to "Next Guess", next_guess_game_path(@game), method: :post %>
+
+<%# Display scores of all users %>
+<h2>Scores:</h2>
+<% @users.each do |user| %>
+  <p><%= user.name %>: <%= user.dial_guesses.first %> points</p>
+<% end %>
+
+<%# Display set dials %>
+<% @set_dials.each do |set_dial| %>
+  <div class="set-dial">
+    <p><%= Topic.find(set_dial.dial.topic_id).topic %></p>
+    <p>Setter Word: <%= set_dial.setter_word %></p>
+  </div>
+<% end %>
