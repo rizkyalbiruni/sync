@@ -14,16 +14,15 @@ class SetDialsController < ApplicationController
     @set_dial.game = @game
     @set_dial.user = @user
     @topic = @game.topic
-    @dial = @topic.dials.sample
-    @set_dial.dial = @dial
-    @set_dial.save!
+
+    @set_dial.save
     redirect_to game_path(@game)
   end
 
   private
 
   def set_dial_params
-    params.require(:set_dial).permit(:setter_word)
+    params.require(:set_dial).permit(:setter_word, :setter_value, :dial_id)
   end
 
 end

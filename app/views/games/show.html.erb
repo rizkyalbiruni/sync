@@ -28,20 +28,7 @@
 <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
 <%end%>
 
-<%# Display points scored for each guess %>
-<% if @points.present? %>
-  <p>Points scored for this guess: <%= @points %></p>
-<% end %>
-<%# Display scores of all users %>
-<h2>Scores:</h2>
-<% @users.each do |user| %>
-  <p><%= user.name %>: <%= user.dial_guesses.first %> points</p>
-<% end %>
 
-<%# Display set dials %>
-<% @set_dials.each do |set_dial| %>
-  <div class="set-dial">
-    <p><%= Topic.find(set_dial.dial.topic_id).topic %></p>
-    <p>Setter Word: <%= set_dial.setter_word %></p>
-  </div>
+<%= @set_dials.each do |set_dial| %>
+<% set_dial.dial_guesses.all %>
 <% end %>

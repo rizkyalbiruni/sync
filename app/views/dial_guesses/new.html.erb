@@ -1,16 +1,16 @@
 <p> <%= @topic.topic %> </p>
 
+<h1> Where do you think <%=@setter %> ranks <%= @setter_word %> ?</h1>
 
-
-<div data-controller="setdial">
-
-<div data-setdial-target="guesserValue" class="d-none">
-  <h1> <%=@set_dial.setter_word %> </h1>
-</div>
-
-</div>
 
 
 <h2> <%= @left %> (0) <--------> (100) <%= @right %> </h2>
 
 <p> Type your dial guess </p>
+
+<%= simple_form_for [@set_dial, @dial_guess] do |f|%>
+<% f.input :set_dial %>
+<%= f.input :guessed_value %>
+<br>
+<%= f.submit "Submit" %>
+<% end %>
