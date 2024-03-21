@@ -1,4 +1,57 @@
 
+.animated-gradient-button {
+  border: none;
+  padding: 1em;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0,0,0,.45);
+
+  &:before, &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 105%;
+    content: '';
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  }
+
+  &:before {
+    filter: blur(7px);
+    transition: all .25s ease;
+    animation: pulse 10s infinite ease;
+  }
+
+  &:after {
+    filter: blur(0.3px);
+  }
+
+  &:hover {
+    &:before {
+      width: 115%;
+      height: 115%;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @mixin center-flex {
   display: flex;
   justify-content: center;
@@ -20,43 +73,10 @@ header.app-header {
   h1 {
     $headers-font: "Nunito", "Helvetica", "sans-serif";
     font-size: $font-size-large;
-    $blue: #0D6EFD;
+    $blue: #ffffff;
   }
 }
 
-main.app-content {
-  padding: 0 20px;
-
-  section.introduction {
-    p {
-      margin-bottom: 20px;
-    }
-  }
-
-  section.how-it-works {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-
-    button {
-      font-size: $font-size-small;
-      background-color: transparent;
-      $orange: #E67E22;
-      border: 2px solid $primary-color;
-      border-radius: 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-
-      &:hover {
-        $gray: #0E0000;
-        color: #fff;
-      }
-    }
-  }
-
-
-}
 
 
 @media (max-width: 428px) {
