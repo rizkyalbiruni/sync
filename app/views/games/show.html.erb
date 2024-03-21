@@ -10,6 +10,7 @@
 
 
 <%# Display list of players %>
+<h1>Topic : <%= @game.topic.topic %></h1>
 <h2>Players:</h2>
 <ul>
   <% @users.each do |user| %>
@@ -34,7 +35,7 @@
 <%# Display scores of all users %>
 <h2>Scores:</h2>
 <% @users.each do |user| %>
-  <p><%= user.name %>: <%= user.points %> points</p>
+  <p><%= user.name %>: <%= user.dial_guesses.first %> points</p>
 <% end %>
 
 <%# Display set dials %>

@@ -10,7 +10,8 @@ class GroupsController < ApplicationController
       @group_subscription.save
       redirect_to root_path
     else
-      render "pages/home", status: :unprocessable_entity
+      #render "pages/home", status: :unprocessable_entity
+      redirect_to root_path, alert: "code must be 4 capital letters"
     end
   end
 
