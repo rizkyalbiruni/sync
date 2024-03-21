@@ -10,7 +10,7 @@ class SetDialsController < ApplicationController
     @user = current_user
     @set_dial = SetDial.new(set_dial_params)
     @set_dial.save
-
+    raise
   end
 
   private
