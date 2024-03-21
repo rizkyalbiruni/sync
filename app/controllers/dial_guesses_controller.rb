@@ -1,10 +1,12 @@
 class DialGuessesController < ApplicationController
 
   def new
-    @user = current_user
-    @set_dial = SetDial.find(params[:id])
     @dial_guess = DialGuess.new
-
+    @user = current_user
+    @set_dial = SetDial.find(params[:set_dial_id])
+    @topic = @set_dial.dial.topic
+    @left = @set_dial.dial.left
+    @right = @set_dial.dial.right
   end
 
   def create

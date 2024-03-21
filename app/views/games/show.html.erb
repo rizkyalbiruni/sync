@@ -17,18 +17,21 @@
   <% @users.each do |user| %>
     <li><%= user.name %></li>
   <% end %>
-  <%=@set_dials.all%>
 </ul>
 
+
+<%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
+
+<%# Button to move to the next guess %>
+<% next_guess = current_user.next_dial_id_to_guess(@game)%>
+<% if next_guess %>
+<%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
+<%end%>
 
 <%# Display points scored for each guess %>
 <% if @points.present? %>
   <p>Points scored for this guess: <%= @points %></p>
 <% end %>
-
-<%# Button to move to the next guess %>
-<%= button_to "Next Guess", next_guess_game_path(@game), method: :post %>
-
 <%# Display scores of all users %>
 <h2>Scores:</h2>
 <% @users.each do |user| %>
