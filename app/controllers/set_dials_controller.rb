@@ -9,9 +9,15 @@ class SetDialsController < ApplicationController
 
   def create
     @user = current_user
+    @game = Game.find(params[:game_id])
     @set_dial = SetDial.new(set_dial_params)
-    @set_dial.save
-    raise
+    @set_dial.game = @game
+    @set_dial.user = @user
+    @topic = @game.topic
+    @dial = @topic.dials.sample
+    @set_dial.dial = @dial
+    @set_dial.save!
+    redirect_to game_path(@game)
   end
 
   private
