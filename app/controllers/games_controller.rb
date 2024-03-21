@@ -10,7 +10,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(group_id: params[:group_id], topic_id: params[:topic_id])
     if @game.save
-      redirect_to new_topic_set_dial_path(params[:topic_id])
+      redirect_to new_game_set_dial_path(@game)
     else
       flash[:alert] = "Failed to create game"
       redirect_to @game
