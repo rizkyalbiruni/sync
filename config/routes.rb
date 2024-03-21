@@ -14,15 +14,21 @@ end
   resources :groups, only: [:create] do
     resources :games, only: [:create]
   end
-  resources :games, only: [:show]
+  resources :games, only: [:show] do
+    resources :set_dials, only: [:new, :create]
+  end
   resources :group_subscriptions, only: [:create]
   # Defines the root path route ("/")
   # root "posts#index"
+
   resources :topics, only: [:show] do
     resources :set_dials, only: [:new, :create] do
       resources :dial_guesses, only: [:new, :create]
     end
   end
 
+resources :set_dials, only: [] do
+  resources :dial_guesses, only: [:new, :create]
+end
 
 end

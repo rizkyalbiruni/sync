@@ -22,7 +22,6 @@ class GamesController < ApplicationController
         flash[:alert] = "Failed to create game"
         redirect_to @game
       end
-    end
-  end
-
+     end
+   end
 end
