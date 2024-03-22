@@ -3,14 +3,14 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+
     @game.update(status: true)
+
     @users = @game.users
     @set_dials = @game.set_dials
     @user = current_user
 
   end
-
-
 
 
   def create
