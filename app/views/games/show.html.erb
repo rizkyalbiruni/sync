@@ -1,0 +1,47 @@
+<%#
+# List of all players(2) in the game in game show page
+# A button to start guessing
+# After the guess I will be redirected to the game show page
+# I will see the number of points that I scored for that guess
+# Press the button to move on to the next guess
+# The guessing part goes on until I guessed all user questions
+# Once every user done the guessing the page will show all user scores
+%>
+
+
+<%# Display list of players %>
+<h1>Topic : <%= @game.topic.topic %></h1>
+<h2>Players:</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.name %></li>
+  <% end %>
+</ul>
+
+<%# Guessing interface %>
+<%= form_with(url: guess_game_path(@game), method: :post) do |f| %>
+  <%= f.text_field :guess_input, placeholder: "Enter your guess" %>
+  <%= f.submit "Submit Guess" %>
+<% end %>
+
+<%# Display points scored for each guess %>
+<% if @points.present? %>
+  <p>Points scored for this guess: <%= @points %></p>
+<% end %>
+
+<%# Button to move to the next guess %>
+<%= button_to "Next Guess", next_guess_game_path(@game), method: :post %>
+
+<%# Display scores of all users %>
+<h2>Scores:</h2>
+<% @users.each do |user| %>
+  <p><%= user.name %>: <%= user.dial_guesses.first %> points</p>
+<% end %>
+
+<%# Display set dials %>
+<% @set_dials.each do |set_dial| %>
+  <div class="set-dial">
+    <p><%= Topic.find(set_dial.dial.topic_id).topic %></p>
+    <p>Setter Word: <%= set_dial.setter_word %></p>
+  </div>
+<% end %>
