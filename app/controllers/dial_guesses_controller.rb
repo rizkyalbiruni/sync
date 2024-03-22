@@ -18,7 +18,7 @@ class DialGuessesController < ApplicationController
     @dial_guess.user = @user
     @dial_guess.set_dial = @set_dial
     @game = @set_dial.game
-    @points = calculate_points
+    @dial_guess.points = calculate_points
     @dial_guess.save
     redirect_to game_path(@game)
   end
