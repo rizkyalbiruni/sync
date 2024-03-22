@@ -16,6 +16,7 @@ class DialGuessesController < ApplicationController
     @user = current_user
     @set_dial = SetDial.find(params[:set_dial_id])
     @game = @set_dial.game
+    @points = calculate_points
     @dial_guess.save
     redirect_to game_path(@game)
   end
@@ -24,15 +25,16 @@ class DialGuessesController < ApplicationController
   private
 
   def dial_guess_params
-    params.require(:dial_guess).permit(:guessed_value)
+    params.require(:dial_guess).permit(:guessed_value, :points)
   end
 
   def calculate_points
     @user = current_user
     @set_dial = SetDial.find(params[:set_dial_id])
+    @dial_guess = DialGuess.new(dial_guess_params)
     @guessed_value = @dial_guess.guessed_value
     @setter_value = @set_dial.setter_value
-    raise
+    @guessed_value - @setter_value
   end
 
 
