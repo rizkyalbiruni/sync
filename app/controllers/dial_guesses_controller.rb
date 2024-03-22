@@ -30,6 +30,7 @@ class DialGuessesController < ApplicationController
     params.require(:dial_guess).permit(:guessed_value, :points)
   end
 
+
   def calculate_points
     @guessed_value = @dial_guess.guessed_value
     @setter_value = @set_dial.setter_value

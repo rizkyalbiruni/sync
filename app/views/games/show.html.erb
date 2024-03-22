@@ -10,7 +10,7 @@
 
 
 <%# Display list of players %>
-<h1>Topic : <%= @game.topic.topic %></h1>
+<h2>Topic : <%= @game.topic.topic %></h2>
 <h2>Players:</h2>
 
 <ul>
@@ -28,4 +28,10 @@
 <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
 <%end%>
 
+
+<%= @set_dials.each do |set_dial| %>
+  <p> For the range <%= set_dial.dial.left%>(0) to <%= set_dial.dial.right%>(100)</p>
+  <p> The number was <%= set_dial.setter_value %> </p>
+  <p> <%= set_dial.user.name %> chose <%= set_dial.setter_word%> </p>
+  <% end %>
 
