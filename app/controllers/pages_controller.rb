@@ -7,5 +7,6 @@ class PagesController < ApplicationController
     @group = Group.new
     @game = Game.new
     @topics = Topic.all
+    @user = current_user
   end
 end
