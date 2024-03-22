@@ -7,6 +7,7 @@ class GamesController < ApplicationController
     @users = @game.users
     @set_dials = @game.set_dials
     @user = current_user
+
   end
 
 
