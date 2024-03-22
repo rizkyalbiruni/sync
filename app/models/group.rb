@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   validates :code, uniqueness: true
   has_many :users, through: :group_subscriptions
   #has_many :games
-  has_one :game
+  has_one :game, dependent: :destroy
   has_many :messages, dependent: :destroy
   belongs_to :user, optional: true
 end
