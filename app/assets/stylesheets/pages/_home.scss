@@ -1,3 +1,4 @@
+
 @keyframes pulse {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -9,50 +10,61 @@
   justify-content: center;
   align-items: center;
 }
-body {
-  background-image: url('https://iili.io/Jh2wTxI.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: $primary-color;
-}
 
 
 body {
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-family: $headers-font;
   font-size: 16px;
+  position: center;
   margin: 0;
   padding: 0;
+  body, html {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  background-image: url('https://iili.io/Jh2wTxI.jpg');
+  background-size: contain;
+  color: $primary-color;
   background-color: #ffffff;
+
+
+
 }
 
 header.app-header {
   @include center-flex;
   text-align: center;
   margin: 20px 0;
-}
-body {
-  font-family: $body-font;
-  font-size: $font-size-base;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+
 }
 
 h1 {
-  margin-top: 363px;
+  margin-top: 360px;
+  letter-spacing: 0.2em;
   font-family: $headers-font;
-  font-size: $font-size-large;
-  color: $primary-color;
+  font-size: 75px;
+  color: #ffffff;
   font-weight: bolder;
-
+  position: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-shadow:
+    0px 0px 6px rgb(57, 52, 52),
+    0px 0px 10px rgba(0, 0, 0, 0.247),
+    1px 1px 6px rgba(35, 34, 35, 0.444);
+  display: inline-block;
+  background: #f2f2f204;
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
 }
 
 p {
   font-size: $font-size-small;
+
 }
-
-
 
 .app-content {
   display: flex;
@@ -61,53 +73,56 @@ p {
   align-items: center;
   min-height: 100vh;
 }
-
 .animated-gradient-button {
   border: none;
-  padding: 1em;
-  outline: none;
+  padding: 0.9em 2em;
   color: white;
+  text-shadow:
+    0px 0px 6px rgba(255, 255, 255, 0.7),
+    0px 0px 10px rgba(255, 255, 255, 0.5),
+    1px 1px 6px rgb(0, 0, 0);
   text-transform: uppercase;
-  font-weight: 900;
-  font-size: 1.2em;
-  letter-spacing: 0.2em;
+  font-weight: 300;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
   position: relative;
   z-index: 1;
   cursor: pointer;
   background: none;
-  text-shadow: 3px 3px 10px rgba(0,0,0,.45);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  &:before, &:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 10em;
-    transform: translate(-50%, -50%);
-    width: 105%;
-    height: 105%;
-    content: '';
-    z-index: -2;
-    background-size: 400% 400%;
-    background: linear-gradient(60deg, #ff7b00, #f9643a, #f98445, #ffb048, #f2d230, #e8f9a6, #07b39b, #6fba82);
-  }
-  &:before {
-    filter: blur(7px);
-    transition: all .25s ease;
-    animation: pulse 10s infinite ease;
-  }
-  &:after {
-    filter: blur(0.3px);
-  }
-  &:hover {
-    &:before {
-      width: 115%;
-      height: 115%;
-    }
-  }
+  font-family: $headers-font;
+  width: 300px;
+  height: 40px;
 }
 
+.animated-gradient-button::before, .animated-gradient-button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: -2;
+  background-size: 200% 200%;
+  background: linear-gradient(135deg, #fa9530, #f3297383,#2c1e6160, #648e95b8, #00282882);
+  border-color: #ff0be7;
+  box-shadow:   0px 0px 10px rgba(26, 25, 25, 0.136)
+}
+
+.animated-gradient-button::before {
+  filter: blur(9px);
+  transition: all .25s ease;
+  animation: pulse 10s infinite ease;
+}
+
+.animated-gradient-button:hover::before {
+  width: 110%;
+  height: 110%;
+}
 
 .how-it-works-btn {
   position: absolute;
@@ -117,7 +132,6 @@ p {
   color: #07b39b;
 }
 
-
 .how-it-works-text {
   color: black;
   font-size: 20px;
@@ -125,10 +139,32 @@ p {
   padding: 10px;
 }
 
-
 .create-group-btn {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.btn-outline-primary {border: none;
+  padding: 0.9em 2em;
+  color: white;
+  text-shadow:
+    0px 0px 6px rgba(255, 255, 255, 0.7),
+    0px 0px 10px rgba(255, 255, 255, 0.5),
+    1px 1px 6px rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $headers-font;
+  width: 150px;
+  height: 40px
 }
