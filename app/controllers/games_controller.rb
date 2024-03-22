@@ -5,6 +5,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @users = @game.users
     @set_dials = @game.set_dials
+    # @points =
   end
 
   def create

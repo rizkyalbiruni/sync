@@ -9,7 +9,10 @@ class SetDialsController < ApplicationController
   def create
     @user = current_user
     @set_dial = SetDial.new(set_dial_params)
+    @set_dial.user = current_user
+    raise
     @set_dial.save
+    redirect_to
 
   end
 

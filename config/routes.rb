@@ -24,5 +24,4 @@ resources :topics, only: [:show] do
   end
 end
 
-
 end

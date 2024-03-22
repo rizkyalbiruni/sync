@@ -17,25 +17,10 @@
   <% end %>
 </ul>
 
-<%# Guessing interface %>
-<%= form_with(url: guess_game_path(@game), method: :post) do |f| %>
-  <%= f.text_field :guess_input, placeholder: "Enter your guess" %>
-  <%= f.submit "Submit Guess" %>
-<% end %>
 
-<%# Display points scored for each guess %>
-<% if @points.present? %>
-  <p>Points scored for this guess: <%= @points %></p>
-<% end %>
+<%# Button to move to the next guess add path %>
+<%= button_to "Next Guess"%>
 
-<%# Button to move to the next guess %>
-<%= button_to "Next Guess", next_guess_game_path(@game), method: :post %>
-
-<%# Display scores of all users %>
-<h2>Scores:</h2>
-<% @users.each do |user| %>
-  <p><%= user.name %>: <%= user.points %> points</p>
-<% end %>
 
 <%# Display set dials %>
 <% @set_dials.each do |set_dial| %>
@@ -44,3 +29,5 @@
     <p>Setter Word: <%= set_dial.setter_word %></p>
   </div>
 <% end %>
+
+<%#  %>
