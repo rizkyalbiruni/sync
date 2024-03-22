@@ -27,25 +27,26 @@
 <% if next_guess %>
 <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
 <%end%>
+<br>
+<br>
 
 <% if @set_dials.count == @users.count  %>
 
   <% @set_dials.each do |set_dial| %>
   <% if set_dial.user.name == current_user.name %>
-    <p> For the range <%= set_dial.dial.left%>(0) to <%= set_dial.dial.right%>(100) the number was <%= set_dial.setter_value %> </p>
-    <p> You chose <%= set_dial.setter_word%> </p>
+    <p> You were asked: What is <%= set_dial.setter_value %> on the scale <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?</p>
+    <p> You chose: <strong><%= set_dial.setter_word%> </strong></p>
         <% set_dial.dial_guesses.each do |dial_guess| %>
-        <p> <%= dial_guess.user.name%> guessed <%= dial_guess.guessed_value%> </p>
-        <p> so they get <%= dial_guess.points.abs%> points <p>
+        <p> <%= dial_guess.user.name%> guessed <%= dial_guess.guessed_value%> <strong> (<%= dial_guess.points.abs%> points away) </strong></p>
         <% end %>
+        <br>
+        <br>
     <% else %>
-    <p> For the range <%= set_dial.dial.left%>(0) to <%= set_dial.dial.right%>(100) the number was <%= set_dial.setter_value %> </p>
-    <p> <%= set_dial.user.name %> chose <%= set_dial.setter_word%> </p>
+    <p> <%= set_dial.user.name %> was asked: What is a <%= set_dial.setter_value %> in the scale of <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?  </p>
+       <p> They put: <strong><%= set_dial.setter_word%></strong> </p>
         <% set_dial.dial_guesses.each do |dial_guess| %>
-        <p> you guessed <%= dial_guess.guessed_value%> </p>
-        <p> so you get <%= dial_guess.points.abs%> points <p>
+        <p> You guessed <%= dial_guess.guessed_value%> <strong>(<%= dial_guess.points.abs%> points away) </strong></p>
         <% end %>
     <% end %>
     <% end %>
-
 <%end%>
