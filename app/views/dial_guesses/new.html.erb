@@ -9,7 +9,8 @@
 <p> Type your dial guess </p>
 
 <%= simple_form_for [@set_dial, @dial_guess] do |f|%>
-<% f.input :set_dial %>
+<% f.input :set_dial, input_html: {value: @set_dial.id}, as: :hidden %>
+<% f.input :points, input_html: {value: @points}, as: :hidden%>
 <%= f.input :guessed_value %>
 <br>
 <%= f.submit "Submit" %>
