@@ -10,38 +10,42 @@
 
 
 <%# Display list of players %>
-<h1>Topic : <%= @game.topic.topic %></h1>
+<h2>Topic : <%= @game.topic.topic %></h2>
 <h2>Players:</h2>
+
 <ul>
   <% @users.each do |user| %>
     <li><%= user.name %></li>
   <% end %>
 </ul>
 
-<%# Guessing interface %>
-<%= form_with(url: guess_game_path(@game), method: :post) do |f| %>
-  <%= f.text_field :guess_input, placeholder: "Enter your guess" %>
-  <%= f.submit "Submit Guess" %>
-<% end %>
 
-<%# Display points scored for each guess %>
-<% if @points.present? %>
-  <p>Points scored for this guess: <%= @points %></p>
-<% end %>
+<%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
 
 <%# Button to move to the next guess %>
-<%= button_to "Next Guess", next_guess_game_path(@game), method: :post %>
+<% next_guess = current_user.next_dial_id_to_guess(@game)%>
+<% if next_guess %>
+<%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
+<%end%>
 
-<%# Display scores of all users %>
-<h2>Scores:</h2>
-<% @users.each do |user| %>
-  <p><%= user.name %>: <%= user.dial_guesses.first %> points</p>
-<% end %>
+<% if @set_dials.count == @users.count  %>
 
-<%# Display set dials %>
-<% @set_dials.each do |set_dial| %>
-  <div class="set-dial">
-    <p><%= Topic.find(set_dial.dial.topic_id).topic %></p>
-    <p>Setter Word: <%= set_dial.setter_word %></p>
-  </div>
-<% end %>
+  <% @set_dials.each do |set_dial| %>
+  <% if set_dial.user.name == current_user.name %>
+    <p> For the range <%= set_dial.dial.left%>(0) to <%= set_dial.dial.right%>(100) the number was <%= set_dial.setter_value %> </p>
+    <p> You chose <%= set_dial.setter_word%> </p>
+        <% set_dial.dial_guesses.each do |dial_guess| %>
+        <p> <%= dial_guess.user.name%> guessed <%= dial_guess.guessed_value%> </p>
+        <p> so they get <%= dial_guess.points.abs%> points <p>
+        <% end %>
+    <% else %>
+    <p> For the range <%= set_dial.dial.left%>(0) to <%= set_dial.dial.right%>(100) the number was <%= set_dial.setter_value %> </p>
+    <p> <%= set_dial.user.name %> chose <%= set_dial.setter_word%> </p>
+        <% set_dial.dial_guesses.each do |dial_guess| %>
+        <p> you guessed <%= dial_guess.guessed_value%> </p>
+        <p> so you get <%= dial_guess.points.abs%> points <p>
+        <% end %>
+    <% end %>
+    <% end %>
+
+<%end%>

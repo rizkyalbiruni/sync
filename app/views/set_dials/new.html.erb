@@ -19,7 +19,8 @@
 <p> Type your answer based on the dial place </p>
 
 <%= simple_form_for [@game, @set_dial] do |f| %>
-  <% f.input :dial, hidden: true %>
+  <%= f.input :dial_id, input_html: {value: @dial.id}, as: :hidden %>
+  <%= f.input :setter_value, input_html: {value: @setter_value}, as: :hidden%>
   <%= f.input :setter_word %>
   <br>
   <%= f.submit "Submit" %>
