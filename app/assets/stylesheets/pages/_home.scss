@@ -35,7 +35,6 @@ body {
 }
 
 header.app-header {
-  // @include center-flex;
   text-align: center;
   margin: 20px 0;
 
@@ -74,41 +73,9 @@ p {
   align-items: center;
   min-height: 100vh;
 }
-.animated-gradient-button {
-  border: none;
-  padding: 0.9em 2em;
-  color: rgb(255, 255, 255);
-  text-shadow:
-    0px 0px 6px rgba(255, 255, 255, 0.7),
-    0px 0px 10px rgba(255, 255, 255, 0.5),
-    1px 1px 6px rgb(0, 0, 0);
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 0.7em;
-  letter-spacing: 0.1em;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  background: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $headers-font;
-  width: 150px;
-  height: 40px
-}
 
 
 
-.animated-gradient-button{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 10em;
-  background: linear-gradient(135deg, #fa9530, #f3297383,#2c1e6160, #648e95b8, #00282882);
-  border-color: #ff0be7;
-  box-shadow:   0px 0px 10px rgba(26, 25, 25, 0.136)
-}
 
 
 
@@ -120,50 +87,55 @@ p {
   color: #07b39b;
 }
 
-.how-it-works-text {
-  color: black;
-  font-size: 20px;
-  background-color: white;
-  padding: 10px;
-}
+
 
 .create-group-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
+    background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #ffffff;
+    border-radius: 10px;
+    display: block;
+    text-shadow:
+    0px 0px 6px rgb(57, 52, 52),
+    0px 0px 10px rgba(0, 0, 0, 0.247),
+    1px 1px 6px rgba(35, 34, 35, 0.444);
+
+  }
+
+  .create-group-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
 
 .btn-outline-primary {
-  border: none;
-  padding: 0.9em 2em;
-  color: rgb(255, 255, 255);
-  text-shadow:
-    0px 0px 6px rgba(255, 255, 255, 0.7),
-    0px 0px 10px rgba(255, 255, 255, 0.5),
-    1px 1px 6px rgb(0, 0, 0);
+  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 0.7em;
-  letter-spacing: 0.1em;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  background: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $headers-font;
-  width: 150px;
-  height: 40px
-}
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #ffffff;
+  border-radius: 10px;
+  display: block;
+  text-shadow:
+  0px 0px 6px rgb(57, 52, 52),
+  0px 0px 10px rgba(0, 0, 0, 0.247),
+  1px 1px 6px rgba(35, 34, 35, 0.444);
+  }
 
-.btn-outline-primary {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 10em;
-  background: linear-gradient(135deg, #fa9530, #f3297383,#2c1e6160, #648e95b8, #00282882);
-  border-color: #ff0be7;
-  box-shadow:   0px 0px 10px rgba(26, 25, 25, 0.136)
-}
+  .btn-btn-outline-primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
