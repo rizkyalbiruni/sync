@@ -50,3 +50,28 @@
     <% end %>
     <% end %>
 <%end%>
+
+<% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>
+<%# chatroom %>
+  <div class="container chatroom" data-controller="chatroom-subscription"
+    data-chatroom-subscription-game-id-value="<%= @game.id %>">
+    <h1>#<%= @group.name %></h1>
+
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @group.messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+      <% end %>
+    </div>
+    <%= simple_form_for [@game, @message],
+    html: {class: "d-flex"} do |f|
+  %>
+    <%= f.input :content,
+      label: false,
+      placeholder: "Message ##{@group.name}",
+      wrapper_html: {class: "flex-grow-1"}
+    %>
+    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+  <% end %>
+  </div>
+<% end %>
+<%# chatroom %>
