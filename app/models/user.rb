@@ -23,7 +23,7 @@ class User < ApplicationRecord
     my_game_guesses = game.dial_guesses.where(user: self)
 
     my_game_points = my_game_guesses.map do |game_guess|
-    game_guess.points
+    game_guess.points.abs
     end
 
     my_game_points.sum

@@ -5,5 +5,4 @@ class Game < ApplicationRecord
   has_many :group_subscriptions, through: :group
   has_many :users, through: :group_subscriptions
   has_many :dial_guesses, through: :set_dials
-
 end
