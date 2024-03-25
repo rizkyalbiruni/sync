@@ -16,6 +16,7 @@ end
   end
   resources :games, only: [:show] do
     resources :set_dials, only: [:new, :create]
+    resources :messages, only: :create
   end
   resources :group_subscriptions, only: [:create]
   # Defines the root path route ("/")

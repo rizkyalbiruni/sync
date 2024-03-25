@@ -8,8 +8,12 @@ class GamesController < ApplicationController
 
     @users = @game.users
     @set_dials = @game.set_dials
+    @answer = SetDial.find_by(game: @game)
+    @answers = SetDial.where(game: @game)
     @user = current_user
-
+    @group = @game.group
+    @message = Message.new
+    @my_set_dial = @user.set_dials.order(created_at: :desc).last
   end
 
 
@@ -27,6 +31,7 @@ class GamesController < ApplicationController
         flash[:alert] = "Failed to create game"
         redirect_to @game
       end
-     end
-   end
+    end
+  end
+
 end
