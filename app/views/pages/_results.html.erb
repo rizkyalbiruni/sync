@@ -1,0 +1,27 @@
+<h2> Guesses: </h2>
+<div class="result-cards">
+
+<% @set_dials.each do |set_dial| %>
+
+  <div class="result-card">
+  <% if set_dial.all_guessed? %>
+      <% if set_dial.user.name == current_user.name %>
+      <div class="my-result">
+        <p> You were asked: What is <%= set_dial.setter_value %> on the scale <br> <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?</p>
+        <p> You chose: <strong><%= set_dial.setter_word%> </strong></p>
+            <% set_dial.dial_guesses.each do |dial_guess| %>
+            <p> <%= dial_guess.user.name%> guessed <%= dial_guess.guessed_value%> <strong> (<%= dial_guess.points.abs%> points away) </strong></p>
+            <% end %>
+        </div>
+        <% else %>
+        <p> <%= set_dial.user.name %> was asked: What is a <%= set_dial.setter_value %> in the scale of <br> <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?  </p>
+          <p> They put: <strong><%= set_dial.setter_word%></strong> </p>
+            <% set_dial.dial_guesses.each do |dial_guess| %>
+            <p> You guessed <%= dial_guess.guessed_value%> <strong>(<%= dial_guess.points.abs%> points away) </strong></p>
+            <% end %>
+        <% end %>
+      <% end %>
+  </div>
+<%end%>
+
+</div>

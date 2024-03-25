@@ -1,0 +1,20 @@
+.result-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  width: 250px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-result {
+  background-color: rgb(48, 48, 48);
+}
