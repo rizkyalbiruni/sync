@@ -73,6 +73,7 @@
 
                 <% if group.user == current_user %>
                   <div data-controller="topics" class="mt-5">
+                    <%= link_to "Delete", group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
                     <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
                     <div data-topics-target="topicsMenu" class="d-none">
                       <%= render 'topics', group: group %>
