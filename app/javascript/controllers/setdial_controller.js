@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="set-the-dial"
 export default class extends Controller {
-  static targets = ["setterValue", "setterWordForm"]
+  static targets = ["setterValue", "setterWordForm", "setDialButton"]
 
   connect() {
   }
