@@ -2,7 +2,7 @@
   <% @topics.each do |topic| %>
   <%= link_to games_path(group_id: group.id, topic_id: topic.id ), data: {turbo_method: :post} do %>
     <div class="topic-card" data-action="click->topics#select" data-topic-name="<%= topic.topic %>">
-      <%= image_tag "topics/#{topic.topic.downcase}.jpg", class: "topic-image" %>
+      <%= image_tag "topics/#{topic.topic.downcase}.jpeg", class: "topic-image" %>
       <h3><%= topic.topic.capitalize %></h3>
       <% @topicID = topic.id %>
     </div>
