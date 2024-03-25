@@ -19,46 +19,23 @@ body {
   position: center;
   margin: 0;
   padding: 0;
-  body, html {
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  background-image: url('https://iili.io/Jh2wTxI.jpg');
+  background-color: rgb(0, 0, 0);
+  background-image: url('https://i.pinimg.com/564x/e8/a3/87/e8a387d653288f2513143a859b2ae7f4.jpg');
   background-size: contain;
-  color: $primary-color;
-  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white
 
-
-
-}
-
-header.app-header {
-  text-align: center;
-  margin: 20px 0;
 
 }
 
 h1 {
-  margin-top: 360px;
-  letter-spacing: 0.2em;
-  font-family: $headers-font;
-  font-size: 75px;
-  color: #ffffff;
-  font-weight: bolder;
+  text-align: center;
+  margin: 20px 0;
+  margin-top: 240px;
   position: center;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-shadow:
-    0px 0px 6px rgb(57, 52, 52),
-    0px 0px 10px rgba(0, 0, 0, 0.247),
-    1px 1px 6px rgba(35, 34, 35, 0.444);
-  display: inline-block;
-  background: #f2f2f204;
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.31);
+  position: sticky;
+
 }
 
 p {
@@ -75,17 +52,6 @@ p {
 }
 
 
-
-
-
-
-.how-it-works-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  margin-right: 70px;
-  color: #07b39b;
-}
 
 
 

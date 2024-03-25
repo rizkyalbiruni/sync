@@ -1,18 +1,48 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.31);
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand {
+  width: 10px;
+  height: 10px;
+  position: center;
+  margin-left: -800px;
+  position: sticky;
+
 }
+
+
+.how-it-works-btn {
+  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #ffffff;
+  border-radius: 10px;
+  display: block;
+  text-shadow:
+  0px 0px 6px rgb(57, 52, 52),
+  0px 0px 10px rgba(0, 0, 0, 0.247),
+  1px 1px 6px rgba(35, 34, 35, 0.444);
+  }
+
+
+  .btn-outline-primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+
 
 .nav-link  {
   background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
@@ -32,6 +62,9 @@
   1px 1px 6px rgba(35, 34, 35, 0.444);
   }
 
+  .instructions-content {
+    color: white;
+  }
 
 
 
