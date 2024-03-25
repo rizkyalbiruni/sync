@@ -1,0 +1,24 @@
+.topic-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic-card {
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.topic-card:hover {
+  background-color: #f0f0f0;
+}
+
+.topic-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
