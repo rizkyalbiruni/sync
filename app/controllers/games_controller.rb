@@ -10,6 +10,7 @@ class GamesController < ApplicationController
     @set_dials = @game.set_dials
     @user = current_user
     @my_set_dial = @user.set_dials.order(created_at: :desc).last
+
   end
 
 
