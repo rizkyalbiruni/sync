@@ -13,14 +13,22 @@
 <h2>Topic : <%= @game.topic.topic %></h2>
 <h2>Players:</h2>
 
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
+<p> You: <%= @user.game_points(@game)%> points</p>
+
+<% @users.each do |user| %>
+  <% if user != current_user %>
+  <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
   <% end %>
-</ul>
+<%end%>
 
 
+<div>
+<% unless @my_set_dial.present? && @my_set_dial.setter_word.present? %>
 <%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
+<%end %>
+</div>
+
+<% if @set_dials.count == @users.count  %>
 
 <%# Button to move to the next guess %>
 <% next_guess = current_user.next_dial_id_to_guess(@game)%>
@@ -28,27 +36,8 @@
 <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
 <%end%>
 <br>
-<br>
-
-<% if @set_dials.count == @users.count  %>
-
-  <% @set_dials.each do |set_dial| %>
-  <% if set_dial.user.name == current_user.name %>
-    <p> You were asked: What is <%= set_dial.setter_value %> on the scale <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?</p>
-    <p> You chose: <strong><%= set_dial.setter_word%> </strong></p>
-        <% set_dial.dial_guesses.each do |dial_guess| %>
-        <p> <%= dial_guess.user.name%> guessed <%= dial_guess.guessed_value%> <strong> (<%= dial_guess.points.abs%> points away) </strong></p>
-        <% end %>
-        <br>
-        <br>
-    <% else %>
-    <p> <%= set_dial.user.name %> was asked: What is a <%= set_dial.setter_value %> in the scale of <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?  </p>
-       <p> They put: <strong><%= set_dial.setter_word%></strong> </p>
-        <% set_dial.dial_guesses.each do |dial_guess| %>
-        <p> You guessed <%= dial_guess.guessed_value%> <strong>(<%= dial_guess.points.abs%> points away) </strong></p>
-        <% end %>
-    <% end %>
-    <% end %>
+<%# display of results %>
+<%= render 'pages/results'%>
 <%end%>
 
 <% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>

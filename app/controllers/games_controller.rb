@@ -13,6 +13,7 @@ class GamesController < ApplicationController
     @user = current_user
     @group = @game.group
     @message = Message.new
+    @my_set_dial = @user.set_dials.order(created_at: :desc).last
   end
 
 
@@ -32,4 +33,5 @@ class GamesController < ApplicationController
       end
     end
   end
+
 end
