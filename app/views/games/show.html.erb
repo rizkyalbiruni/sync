@@ -17,7 +17,7 @@
 
 <% @users.each do |user| %>
   <% if user != current_user %>
-   <li> <%= user.name%>: <%=  user.game_points(@game)%> </li>
+  <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
   <% end %>
 <%end%>
 
@@ -28,7 +28,6 @@
 <%end %>
 </div>
 
-
 <% if @set_dials.count == @users.count  %>
 
 <%# Button to move to the next guess %>
@@ -37,12 +36,8 @@
 <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
 <%end%>
 <br>
-<br>
 
- <h2> Guesses: </h2>
-<div class="result-cards">
+
 <%# display of results %>
-  <%= render 'pages/results'%>
-</div>
-
+<%= render 'pages/results'%>
 <%end%>
