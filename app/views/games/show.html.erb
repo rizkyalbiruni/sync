@@ -30,8 +30,11 @@
 <br>
 <br>
 
+
 <% if @set_dials.count == @users.count  %>
 
+
+<%# display of results %>
   <% @set_dials.each do |set_dial| %>
   <% if set_dial.user.name == current_user.name %>
     <p> You were asked: What is <%= set_dial.setter_value %> on the scale <%= set_dial.dial.left%> (0) to <%= set_dial.dial.right%> (100)?</p>
