@@ -7,4 +7,12 @@ class Game < ApplicationRecord
   has_many :messages, through: :group
   has_many :dial_guesses, through: :set_dials
 
+
+  def game_finished?
+  total_guesses = dial_guesses.size
+  guessing_users = users.size - 1
+  total_dials = self.set_dials.size
+  total_guesses == guessing_users * total_dials && total_guesses != 0
+  end
+
 end

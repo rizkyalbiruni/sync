@@ -39,6 +39,18 @@
     <%= render 'pages/results'%>
 <%end%>
 
+
+<%# game over %>
+<% if @game.game_finished? %>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Final Results
+</button>
+<%= render 'pages/modal'%>
+<% end %>
+
+
+<% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>
+
 <%# chatroom %>
 <% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>
 
