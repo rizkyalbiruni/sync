@@ -19,6 +19,8 @@
         </li>
 
 
+
+
         <li class="nav-item">
           <div data-controller="instructions">
             <button data-action="click->instructions#reveal" class="how-it-works-btn btn btn-link" aria-label="How it works">?</button>
@@ -45,6 +47,7 @@
 
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
         <% end %>
       </ul>

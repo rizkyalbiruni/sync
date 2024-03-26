@@ -11,11 +11,8 @@
 .navbar-brand {
   width: 10px;
   height: 10px;
-  //position: center;
-  margin-left: -1200px;
-  position: sticky;
-
-
+  position: fixed
+}
 
 .how-it-works-btn {
   background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
