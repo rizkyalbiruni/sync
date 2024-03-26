@@ -5,33 +5,41 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  // background-color: red;
+  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  border-radius: 10px;
 }
 
 .navbar-brand {
-  width: 10px;
-  height: 10px;
+  width: 60px;
+  height: auto;
   //position: center;
-  margin-left: -1200px;
-  position: sticky;
+  // margin-left: -1200px;
+  // position: sticky;
+}
+
+.navbar-toggler {
+  background-color: #fff !important;
 }
 
 
 .how-it-works-btn {
-  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  // background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
   margin: 10px;
-  padding: 15px 45px;
+  width: 100%;
+  //padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #ffffff;
-  border-radius: 10px;
+  //box-shadow: 0 0 20px #ffffff;
+  //border-radius: 10px;
   display: block;
-  text-shadow:
-  0px 0px 6px rgb(57, 52, 52),
-  0px 0px 10px rgba(0, 0, 0, 0.247),
-  1px 1px 6px rgba(35, 34, 35, 0.444);
+  //text-shadow:
+  //0px 0px 6px rgb(57, 52, 52),
+  //0px 0px 10px rgba(0, 0, 0, 0.247),
+  //1px 1px 6px rgba(35, 34, 35, 0.444);
   }
 
 
@@ -44,21 +52,22 @@
 
 
 .nav-link  {
-  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  // background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
   margin: 10px;
   padding: 15px 45px;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
-  background-size: 200% auto;
+  // background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #ffffff;
-  border-radius: 10px;
+  // box-shadow: 0 0 20px #ffffff;
+  // border-radius: 10px;
   display: block;
-  text-shadow:
-  0px 0px 6px rgb(57, 52, 52),
-  0px 0px 10px rgba(0, 0, 0, 0.247),
-  1px 1px 6px rgba(35, 34, 35, 0.444);
+  //text-shadow:
+  //0px 0px 6px rgb(57, 52, 52),
+  //0px 0px 10px rgba(0, 0, 0, 0.247),
+  //1px 1px 6px rgba(35, 34, 35, 0.444);
   }
 
   .instructions-content {
