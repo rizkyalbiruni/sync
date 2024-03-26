@@ -40,21 +40,28 @@
         </div>
       </div>
 
+<%#Groups%>
+
+
+
         <% if current_user %>
           <div class="justify-content-center d-flex">
             <ul>
               <% @groups.each do |group| %>
+        <div data-controller="group-update-subscription" data-group-update-subscription-group-id-value="<%=group.id%>">
                 <li><h2><%= group.name %></h2></li>
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
                   <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
                   <button class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
-
+          <div data-group-update-subscription-target="groups">
                 <p>players :</p>
                 <% group.group_subscriptions.each do |gs|%>
                   <p><%= gs.user.name %></p>
+                  <p>
                 <% end %>
-
+          </div>
+        </div>
 
                 <% if group.user == current_user %>
                   <div data-controller="topics" class="mt-5">

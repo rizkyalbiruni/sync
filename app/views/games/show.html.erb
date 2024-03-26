@@ -17,7 +17,9 @@
 
 <% @users.each do |user| %>
   <% if user != current_user %>
-    <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
+  <ul>
+  <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
+  </ul>
   <% end %>
 <%end%>
 
@@ -49,7 +51,6 @@
 <% end %>
 
 
-<% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>
 
 <%# chatroom %>
 <% if (@game.set_dials.count == @users.count) && (@game.set_dials[-1].dial_guesses.count == 1)  %>
