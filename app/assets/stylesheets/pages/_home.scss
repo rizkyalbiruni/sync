@@ -15,13 +15,13 @@
 
 body {
   font-family: $headers-font;
-  font-size: 16px;
+  font-size: 15px;
   position: center;
   margin: 0;
   padding: 0;
   background-color: rgb(0, 0, 0);
-  background-image: url('https://i.pinimg.com/564x/f3/50/fb/f350fb82b4062982c952e0c660933d45.jpg');
-  background-size: contain;
+  background-image: url('https://i.pinimg.com/564x/83/79/1a/83791a58224bd201f71dca70cd39d1cb.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white
@@ -59,52 +59,39 @@ p {
 
 
 
-.create-group-btn {
+.create-group-btn, .btn-outline-primary {
 
-    background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
-    margin: 10px;
+background-color:hsla(239,100%,50%,1);
+background-image:
+radial-gradient(at 92% 83%, hsla(234,61%,2%,1) 0px, transparent 50%),
+radial-gradient(at 75% 31%, hsla(3,87%,2%,1) 0px, transparent 50%),
+radial-gradient(at 68% 40%, hsla(318,98%,2%,1) 0px, transparent 50%),
+radial-gradient(at 9% 28%, hsla(78,62%,2%,1) 0px, transparent 50%),
+radial-gradient(at 76% 60%, hsla(208,63%,2%,1) 0px, transparent 50%),
+radial-gradient(at 55% 78%, hsla(1,64%,2%,1) 0px, transparent 50%),
+radial-gradient(at 99% 99%, hsla(42,70%,2%,1) 0px, transparent 50%);
     padding: 15px 45px;
-    text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 20px #ffffff;
-    border-radius: 10px;
-    display: block;
+    box-shadow: 0 0 20px #2009f2;
     text-shadow:
     0px 0px 6px rgb(57, 52, 52),
     0px 0px 10px rgba(0, 0, 0, 0.247),
     1px 1px 6px rgba(35, 34, 35, 0.444);
-
-  }
-
-  .create-group-btn:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-  }
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+   margin: 4px 2px;
+   border-radius: 20px;
+}
 
 
-.btn-outline-primary {
-  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #ffffff;
-  border-radius: 10px;
-  display: block;
-  text-shadow:
-  0px 0px 6px rgb(57, 52, 52),
-  0px 0px 10px rgba(0, 0, 0, 0.247),
-  1px 1px 6px rgba(35, 34, 35, 0.444);
-  }
 
-  .btn-btn-outline-primary:hover {
+
+
+  .btn-btn-outline-primary:hover,.create-group-btn:hover  {
     background-position: right center;
     color: #fff;
     text-decoration: none;

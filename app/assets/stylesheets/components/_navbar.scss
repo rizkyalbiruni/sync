@@ -1,12 +1,20 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: transparent;
+justify-content: space-between;
+background: transparent
+
+
+
+
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-  // background-color: red;
-  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  background-image: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 10px;
 }
 
