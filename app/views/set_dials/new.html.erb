@@ -7,7 +7,7 @@
 <div data-controller="setdial">
   <button data-action="click->setdial#set" class="btn btn-outline-primary">Set the dial</button>
 
-<h2> <%= @dial.left %> (0) <--------> (100) <%= @dial.right %> </h2>
+<h2> <%= @dial.left %> (0)<br><-><br> (100) <%= @dial.right %> </h2>
 
   <div data-setdial-target="setterValue" class="d-none">
     <h1> <%=@setter_value %> </h1>
