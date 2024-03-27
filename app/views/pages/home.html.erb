@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 <% end %>
-                  <% if group.game && group.game.status%>
+                  <% if group.game && group.game.status && group.user != current_user%>
                     <div class="btn-enter-game">
                       <%= link_to "Enter Game", game_path(group.game) %>
                     </div>

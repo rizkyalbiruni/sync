@@ -1,0 +1,105 @@
+.set-dial-container {
+  text-align: center;
+  button {
+    a {
+      color: purple;
+    }
+    width: 100%;
+    background-color:#99ffe9;
+    background-image:
+    radial-gradient(at 55% 11%, hsla(113,89%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 88% 75%, hsla(184,77%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 66% 11%, hsla(260,81%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 54% 23%, hsla(310,77%,71%,1) 0px, transparent 50%),
+    radial-gradient(at 27% 37%, hsla(204,88%,68%,1) 0px, transparent 50%),
+    radial-gradient(at 83% 95%, hsla(356,99%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 98% 70%, hsla(97,82%,72%,1) 0px, transparent 50%);
+
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #020014;
+      // text-shadow:
+      // 0px 0px 6px rgb(57, 52, 52),
+      // 0px 0px 10px rgba(0, 0, 0, 0.247),
+      // 1px 1px 6px rgba(35, 34, 35, 0.444);
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      margin: 4px 2px;
+      border-radius: 20px;
+
+  }
+}
+
+.dial-box {
+  text-align: center;
+  // background-image: rgba(255, 255, 255, 0.091);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  // backdrop-filter: blur( 4px );
+  // -webkit-backdrop-filter: blur( 1px );
+  // border-radius: 10px;
+  // border: 1px solid rgba( 255, 255, 255, 0.18 );
+  // border-radius: 10px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topic-icon {
+  img {
+    padding-bottom: 80px;
+  }
+}
+
+.dial-number-left {
+  font-weight: bolder;
+  background: #FF5352;
+  background: -moz-radial-gradient(center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
+  background: -webkit-radial-gradient(center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
+  background: radial-gradient(ellipse at center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
+  width: 84px;
+  h3 {
+    color: black;
+  }
+}
+
+.dial-number-right {
+  font-weight: bolder;
+  background: #45FF0F;
+background: -moz-radial-gradient(center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
+background: -webkit-radial-gradient(center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
+background: radial-gradient(ellipse at center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
+  width: 84px;
+  h3 {
+    color: black;
+  }
+}
+
+#check {
+  background: transparent;
+  padding: none;
+  outline: none;
+  font-size: 34px;
+}
+
+#set_dial_setter_word {
+  width: 50%;
+}
+.set_dial_setter_word {
+ // display: flex;
+ input {
+  margin: 0 auto;
+  background: rgba(255, 0, 220, 0.05);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 3px solid rgba(255, 0, 220, 0.68);
+
+ }
+
+}
