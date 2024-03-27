@@ -21,23 +21,36 @@ background: transparent
 .navbar-brand {
   width: 10px;
   height: 20px;
-
-
-
-  //position: center;
+   //position: center;
   // margin-left: -1200px;
   // position: sticky;
 }
 
 .navbar-toggler-icon, .navbar-toggler {
-  color: white!important;
+  color: none!important;
+  margin-top: 27px;
+
 
 
 }
 
+#home-img {
+img { width: 40px;
+height: 40px;
+margin-left: 110px
+}
+}
+
+
+.navbar-nav {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+
 
 .how-it-works-btn {
-  // background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
   margin: 10px;
   width: 100%;
   //padding: 15px 45px;
