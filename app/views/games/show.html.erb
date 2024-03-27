@@ -10,21 +10,25 @@
 
 
 <%# Display list of players %>
-<h2>Topic : <%= @game.topic.topic %></h2>
-<h2>Players:</h2>
+<div class="topic-icon">
+  <h2></h2>
+  <%= image_tag "topics/#{@game.topic.topic.downcase}.png", class: "topic-image" %>
+</div>
+<div class="player-box">
+  <h2><i class="fa-solid fa-users"></i></h2>
 
-<p> You: <%= @user.game_points(@game)%> points</p>
+  <p> You: <%= @user.game_points(@game)%> points</p>
 
-<% @users.each do |user| %>
-  <% if user != current_user %>
-  <ul>
-  <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
-  </ul>
-  <% end %>
-<%end%>
+  <% @users.each do |user| %>
+    <% if user != current_user %>
+    <ul>
+    <li> <%= user.name%>: <%=  user.game_points(@game)%> points </li>
+    </ul>
+    <% end %>
+  <%end%>
+</div>
 
-
-<div>
+<div class="set-dial-btn">
   <% unless @my_set_dial.present? && @my_set_dial.setter_word.present? %>
     <%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
   <%end %>

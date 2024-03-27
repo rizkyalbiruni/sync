@@ -58,7 +58,6 @@
                         <% end %></li>
 
         <div data-controller="group-update-subscription" data-group-update-subscription-group-id-value="<%=group.id%>">
-                <li><h2><%= group.name %></h2></li>
 
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
                   <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
@@ -84,7 +83,7 @@
                     </div>
                   </div>
                 <% end %>
-                  <% if group.game && group.game.status%>
+                  <% if group.game && group.game.status && group.user != current_user%>
                     <div class="btn-enter-game">
                       <%= link_to "Enter Game", game_path(group.game) %>
                     </div>

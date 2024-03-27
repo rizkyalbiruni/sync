@@ -1,27 +1,41 @@
 
 
-<p> <%= @topic.topic %> </p>
+<div class="topic-icon">
+  <h2></h2>
+  <%= image_tag "topics/#{@topic.topic.downcase}.png", class: "topic-image" %>
+</div>
 
 
 
-<div data-controller="setdial">
-  <button data-action="click->setdial#set" class="btn btn-outline-primary">Set the dial</button>
-
-<h2> <%= @dial.left %> (0)<br><-><br> (100) <%= @dial.right %> </h2>
-
+<div class="set-dial-container" data-controller="setdial">
+  <button data-action="click->setdial#set" class="btn btn-outline-primary">Set dial</button>
+<div class="dial-box">
+  <div>
+    <h2> <%= @dial.left %></h2>
+    <div class="dial-number-left">
+      <h3>0</h3>
+    </div>
+  </div>
+  <div>
+    <h2><%= @dial.right %></h2>
+    <div class="dial-number-right">
+      <h3>100</h3>
+    </div>
+  </div>
+</div>
   <div data-setdial-target="setterValue" class="d-none">
     <h1> <%=@setter_value %> </h1>
   </div>
 
   <div class='d-none' data-setdial-target='setterWordForm'>
 
-  <p> Type your answer based on the dial place </p>
+
     <%= simple_form_for [@game, @set_dial] do |f| %>
       <%= f.input :dial_id, input_html: {value: @dial.id}, as: :hidden %>
       <%= f.input :setter_value, input_html: {value: @setter_value}, as: :hidden%>
-      <%= f.input :setter_word %>
+      <%= f.input :setter_word, label: "Your answer based on the number" %>
       <br>
-      <%= f.submit "Submit" %>
+      <%= f.submit "✅", id: "check" %>
     <% end %>
   </div>
 
