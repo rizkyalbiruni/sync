@@ -9,9 +9,9 @@ background: transparent
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-  background-image: rgba( 255, 255, 255, 0.05 );
+  background-image: rgba(255, 255, 255, 0.091);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 1px );
+  backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 1px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -19,15 +19,20 @@ background: transparent
 }
 
 .navbar-brand {
-  width: 60px;
-  height: auto;
+  width: 10px;
+  height: 20px;
+
+
+
   //position: center;
   // margin-left: -1200px;
   // position: sticky;
 }
 
-.navbar-toggler {
-  background-color: #fff !important;
+.navbar-toggler-icon, .navbar-toggler {
+  color: white!important;
+
+
 }
 
 

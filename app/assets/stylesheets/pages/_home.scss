@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(0, 0, 0);
-  background-image: url('https://i.pinimg.com/564x/83/79/1a/83791a58224bd201f71dca70cd39d1cb.jpg');
+  background-image: url('https://i.ibb.co/9VMMJ4F/wallpaperios.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -39,6 +39,7 @@ h1 {
 .app-header {
   img {
     width: 100%;
+    display: flex;
   }
 }
 
@@ -61,16 +62,15 @@ p {
 
 .create-group-btn, .btn-outline-primary {
 
-background-color:hsla(239,100%,50%,1);
-background-image:
-radial-gradient(at 92% 83%, hsla(234,61%,2%,1) 0px, transparent 50%),
-radial-gradient(at 75% 31%, hsla(3,87%,2%,1) 0px, transparent 50%),
-radial-gradient(at 68% 40%, hsla(318,98%,2%,1) 0px, transparent 50%),
-radial-gradient(at 9% 28%, hsla(78,62%,2%,1) 0px, transparent 50%),
-radial-gradient(at 76% 60%, hsla(208,63%,2%,1) 0px, transparent 50%),
-radial-gradient(at 55% 78%, hsla(1,64%,2%,1) 0px, transparent 50%),
-radial-gradient(at 99% 99%, hsla(42,70%,2%,1) 0px, transparent 50%);
-    padding: 15px 45px;
+  background-color:hsla(246,100%,52%,1);
+  background-image:
+  radial-gradient(at 8% 38%, hsla(329,61%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, hsla(20,86%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
+
+
+padding: 15px 45px;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
