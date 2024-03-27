@@ -41,13 +41,18 @@
       </div>
 
         <% if current_user %>
-          <div class="justify-content-center d-flex">
-            <ul>
+          <div  data-controller="topics">
+            <ul class="group-and-player">
               <% @groups.each do |group| %>
-                <li><h2><%= group.name %></h2></li>
+                <li id="parent"><h2><%= group.name %></h2>
+                  <% if group.user == current_user %>
+                    <%= link_to group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure to delete #{group.name}?"} do %>
+                      <i class="fa-regular fa-circle-xmark"></i>
+                        <% end %>
+                        <% end %></li>
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
                   <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
-                  <button class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
+                  <button id="copy-btn" class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
 
                 <p>players :</p>
@@ -57,18 +62,21 @@
 
 
                 <% if group.user == current_user %>
-                  <div data-controller="topics" class="mt-5">
-                    <%= link_to "Delete", group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                  <div class="mt-5">
+                    <%#  <div class="delete">%>
+                      <%#= link_to "Delete", group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                    <%#  </div>%>
                     <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
                     <div data-topics-target="topicsMenu" class="d-none">
                       <%= render 'topics', group: group %>
                     </div>
                   </div>
                 <% end %>
-                <button class="btn btn-outline-primary d-none">Enter game</button>
-                <% if group.game && group.game.status%>
-                <%= link_to "Enter Game", game_path(group.game) %>
-                <% end %>
+                  <% if group.game && group.game.status%>
+                    <div class="btn-enter-game">
+                      <%= link_to "Enter Game", game_path(group.game) %>
+                    </div>
+                  <% end %>
               <% end %>
             </ul>
           </div>
