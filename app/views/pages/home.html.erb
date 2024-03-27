@@ -40,26 +40,37 @@
         </div>
       </div>
 
+<%#Groups%>
+
+
+
         <% if current_user %>
           <div  data-controller="topics">
             <ul class="group-and-player">
               <% @groups.each do |group| %>
+
                 <li id="parent"><h2><%= group.name %></h2>
                   <% if group.user == current_user %>
                     <%= link_to group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure to delete #{group.name}?"} do %>
                       <i class="fa-regular fa-circle-xmark"></i>
                         <% end %>
                         <% end %></li>
+
+        <div data-controller="group-update-subscription" data-group-update-subscription-group-id-value="<%=group.id%>">
+                <li><h2><%= group.name %></h2></li>
+
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
                   <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
                   <button id="copy-btn" class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
-
+          <div data-group-update-subscription-target="groups">
                 <p>players :</p>
                 <% group.group_subscriptions.each do |gs|%>
                   <p><%= gs.user.name %></p>
+                  <p>
                 <% end %>
-
+          </div>
+        </div>
 
                 <% if group.user == current_user %>
                   <div class="mt-5">
