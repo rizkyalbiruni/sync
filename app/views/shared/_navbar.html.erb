@@ -2,25 +2,28 @@
   <div class="container-fluid">
 
     <%= link_to root_path, class: "navbar-brand" do %>
-     <img src="https://i.ibb.co/f8GrT0y/pngwing-com-3.png" alt="pngwing-com-3" border="0">
+    <img src="https://i.ibb.co/1RPBW2T/kindpng-3327708.png" alt="navbar- brand" width="60" height="60">
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+      <img src="https://i.ibb.co/FHNqY1Z/3d.png" alt="3d" width="60" height="60" >
+
     </button>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-
-        <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link" %>
-        </li>
+  <ul class="navbar-nav me-auto">
+    <li id="home-img" class="nav-item active">
+      <%= link_to "/", class: "nav-link" do %>
+        <%= image_tag "https://i.ibb.co/JFntz5M/3d-house.png", alt: "Home" %>
+      <% end %>
+    </li>
 
 
         <li class="nav-item">
           <div data-controller="instructions">
-            <button data-action="click->instructions#reveal" class="how-it-works-btn btn btn-link" aria-label="How it works">?</button>
+            <button data-action="click->instructions#reveal" class="how-it-works-btn btn btn-link" aria-label="How it works">How it</button>
 
             <div data-instructions-target="revealInstructions" class="d-none instructions-content">
   <%= render "pages/instructions" %>

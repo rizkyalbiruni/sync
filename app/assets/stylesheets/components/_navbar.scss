@@ -1,30 +1,56 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: transparent;
+justify-content: space-between;
+background: transparent
+
+
+
+
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-  // background-color: red;
-  background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
+  background-image: rgba(255, 255, 255, 0.091);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 10px;
 }
 
 .navbar-brand {
-  width: 60px;
-  height: auto;
-  //position: center;
+  width: 10px;
+  height: 20px;
+   //position: center;
   // margin-left: -1200px;
   // position: sticky;
 }
 
-.navbar-toggler {
-  background-color: #fff !important;
+.navbar-toggler-icon, .navbar-toggler {
+  color: none!important;
+  margin-top: 27px;
+
+
+
+}
+
+#home-img {
+img { width: 40px;
+height: 40px;
+margin-left: 110px
+}
 }
 
 
+.navbar-nav {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+
+
 .how-it-works-btn {
-  // background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
   margin: 10px;
   width: 100%;
   //padding: 15px 45px;
