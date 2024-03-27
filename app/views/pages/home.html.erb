@@ -7,7 +7,7 @@
       <div class="justify-content-center d-flex">
         <div>
 
-          <div data-controller="toggle" class="mt-5">
+          <div data-controller="toggle" class="mb-3">
               <button data-action="click->toggle#fire" class="create-group-btn">Create group</button>
               <div data-toggle-target="createGroup" class="d-none">
                   <%= simple_form_for(@group) do |f| %>
@@ -20,7 +20,7 @@
               </div>
           </div>
 
-          <div data-controller="toggle" class="mt-5">
+          <div data-controller="toggle" class="mb-3">
             <button class="btn btn-outline-primary" data-action="click->toggle#fire">Join group</button>
               <div data-toggle-target="createGroup" class="d-none">
                   <%= simple_form_for(@group_subscription) do |f| %>
@@ -45,18 +45,17 @@
             <ul class="group-and-player">
               <% @groups.each do |group| %>
           <div class="group-card">
-                <li id="parent"><h2><%= group.name %></h2>
+                <li id="parent"><h2 class="text-center"><%= group.name %></h2>
                   <% if group.user == current_user %>
                     <%= link_to group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure to delete #{group.name}?"} do %>
                       <i class="fa-regular fa-circle-xmark"></i>
                         <% end %>
-          </div>
                         <% end %></li>
 
         <div data-controller="group-update-subscription" data-group-update-subscription-group-id-value="<%=group.id%>">
 
                 <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
-                  <input data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
+                  <input class="clipboard-field" data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
                   <button id="copy-btn" class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
           <div data-group-update-subscription-target="groups" class="d-flex">
@@ -67,12 +66,14 @@
           </div>
         </div>
 
+
+
                 <% if group.user == current_user %>
-                  <div class="mt-5">
+                  <div class="mb-3">
                     <%#  <div class="delete">%>
                       <%#= link_to "Delete", group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
                     <%#  </div>%>
-                    <button class="btn btn-outline-primary" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
+                    <button class="btn btn-outline-primary mb-2" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
                     <div data-topics-target="topicsMenu" class="d-none">
                       <%= render 'topics', group: group %>
                     </div>
@@ -87,3 +88,5 @@
             </ul>
           </div>
         <% end %>
+
+</div>
