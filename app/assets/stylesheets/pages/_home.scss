@@ -76,7 +76,7 @@ p {
 
     position: absolute;
     top: 4px;
-    right: -36px;
+    right: 2px;
     background-color:hsla(359,100%,50%,1);
   background-image:
   radial-gradient(at 45% 42%, hsla(20,96%,5%,1) 0px, transparent 50%),
@@ -163,9 +163,17 @@ padding: 15px 45px;
 
 .group-card {
   padding: 15px;
-  border-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .user-name {
   margin-right: 10px;
 }
+
+.clipboard-field {
+  width: 30%;
+  border-radius: 10px;
+}
+
+
