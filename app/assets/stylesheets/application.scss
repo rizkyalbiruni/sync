@@ -14,6 +14,10 @@
 @import "pages/results";
 @import "pages/modal";
 
-ul.li {
+ul li {
   list-style-type: none;
+}
+
+ul {
+  padding: 0;
 }
