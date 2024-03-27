@@ -28,11 +28,13 @@
   <%end%>
 </div>
 
-<div class="set-dial-btn">
+
   <% unless @my_set_dial.present? && @my_set_dial.setter_word.present? %>
-    <%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
+    <div class="set-dial-btn">
+      <%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
+    </div>
   <%end %>
-</div>
+
 
 <%# Button to move to the next guess %>
 <% if @set_dials.count == @users.count  %>
