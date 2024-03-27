@@ -29,29 +29,25 @@ background: transparent
 .navbar-toggler-icon, .navbar-toggler {
   color: none!important;
   margin-top: 27px;
-
-
-
 }
 
 #home-img {
 img { width: 40px;
 height: 40px;
-margin-left: 110px
+
 }
 }
 
 
 .navbar-nav {
-  width: 40px;
   height: 40px;
   display: inline-block;
+  width: 100%;
 }
 
 
 
 .how-it-works-btn {
-  margin: 10px;
   width: 100%;
   //padding: 15px 45px;
   text-align: center;
@@ -79,8 +75,7 @@ margin-left: 110px
 
 .nav-link  {
   // background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
-  margin: 10px;
-  padding: 15px 45px;
+  padding: 15px 65px;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
