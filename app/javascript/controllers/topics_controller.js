@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="topics"
 export default class extends Controller {
-  static targets = ["topicsMenu", "startGame", "button"]
+  static targets = ["topicsMenu", "startGame", "button", "enterGame"]
 
   connect() {
     console.log("connected")

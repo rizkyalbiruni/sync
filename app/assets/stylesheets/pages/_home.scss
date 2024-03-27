@@ -55,14 +55,52 @@ p {
   min-height: 100vh;
 }
 
+.group-and-player {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#parent {
+  position: relative;
+  i {
 
+    position: absolute;
+    top: 4px;
+    right: -36px;
+    background-color:hsla(359,100%,50%,1);
+  background-image:
+  radial-gradient(at 45% 42%, hsla(20,96%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 74% 28%, hsla(54,11%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 73% 90%, hsla(161,83%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 77% 43%, hsla(182,97%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 28% 30%, hsla(257,63%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 68% 61%, hsla(85,76%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 87% 3%, hsla(124,99%,5%,1) 0px, transparent 50%);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #2009F2;
+    text-shadow:
+    0px 0px 6px rgb(57, 52, 52),
+    0px 0px 10px rgba(0, 0, 0, 0.247),
+    1px 1px 6px rgba(35, 34, 35, 0.444);
+    padding: 6px 6px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50px;
+    }
+}
 
 
 .create-group-btn {
 
     background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
     margin: 10px;
+    width: 100%;
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
@@ -89,6 +127,7 @@ p {
 .btn-outline-primary {
   background-image: linear-gradient(to right, #C33764 0%, #1D2671  51%, #C33764  100%);
   margin: 10px;
+  width: 100%;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
@@ -108,4 +147,31 @@ p {
     background-position: right center;
     color: #fff;
     text-decoration: none;
+  }
+
+  #copy-btn {
+  //background-color:hsla(239,100%,50%,1);
+  background-color: rgb(18, 138, 18);
+  background-image:
+  radial-gradient(at 92% 83%, hsla(234,61%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 75% 31%, hsla(3,87%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 68% 40%, hsla(318,98%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 9% 28%, hsla(78,62%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 76% 60%, hsla(208,63%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 55% 78%, hsla(1,64%,2%,1) 0px, transparent 50%),
+  radial-gradient(at 99% 99%, hsla(42,70%,2%,1) 0px, transparent 50%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #2009F2;
+    text-shadow:
+    0px 0px 6px rgb(57, 52, 52),
+    0px 0px 10px rgba(0, 0, 0, 0.247),
+    1px 1px 6px rgba(35, 34, 35, 0.444);
+    // text-align: center;
+    // display: inline-block;
+    border-radius: 25px;
+    a:link {
+      color: white !important;
+    }
   }
