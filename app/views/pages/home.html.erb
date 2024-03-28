@@ -58,7 +58,7 @@
                   <input class="clipboard-field" data-clipboard-target="input" type="text" value=<%= group.code %> readonly>
                   <button id="copy-btn" class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
-          <div data-group-update-subscription-target="groups" class="d-flex mt-1">
+          <div data-group-update-subscription-target="groups" class="d-flex mt-4 mb-4">
                 <p class="user-name">SYNCED IN:</p>
                 <% group.group_subscriptions.each do |gs|%>
                 <div class='user-name'> <p><%= gs.user.name %>, </p> </div>
