@@ -46,6 +46,7 @@ h1 {
   img {
     width: 100%;
     display: flex;
+   padding-bottom: 0;
   }
 }
 
@@ -75,15 +76,15 @@ p {
   i {
 
     position: absolute;
-    top: 4px;
-    right: 2px;
-    background-color:hsla(359,100%,50%,1);
+    top: 6px;
+    right: 6px;
+    background-color:rgb(149, 0, 55);
   background-image:
-  radial-gradient(at 45% 42%, hsla(20,96%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 74% 28%, hsla(54,11%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 73% 90%, hsla(161,83%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 42%, rgb(19, 1, 73) 0px, transparent 50%),
+  radial-gradient(at 74% 28%, rgba(255, 9, 9, 0.464) 0px, transparent 50%),
+  radial-gradient(at 73% 90%, rgba(255, 10, 10, 0.429) 0px, transparent 50%),
   radial-gradient(at 77% 43%, hsla(182,97%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 28% 30%, hsla(257,63%,5%,1) 0px, transparent 50%),
+  radial-gradient(at 28% 30%, rgb(255, 13, 219) 0px, transparent 50%),
   radial-gradient(at 68% 61%, hsla(85,76%,5%,1) 0px, transparent 50%),
   radial-gradient(at 87% 3%, hsla(124,99%,5%,1) 0px, transparent 50%);
     text-transform: uppercase;
@@ -114,11 +115,11 @@ p {
   radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
 
 
-padding: 15px 45px;
-
+    padding: 10px 45px;
+    font-size: 12px;
     text-transform: uppercase;
     transition: 0.5s;
-    background-size: 200% auto;
+    background-size: 100% auto;
     color: white;
     box-shadow: 0 0 20px #2009f2;
     text-shadow:
@@ -129,22 +130,22 @@ padding: 15px 45px;
     text-align: center;
     display: block;
    margin: 0 auto;
-   border-radius: 20px;
+   border-radius: 25px;
+
 }
 
 
 
   #copy-btn {
   //background-color:hsla(239,100%,50%,1);
-  background-color: rgb(18, 138, 18);
+  background-color:hsla(246,100%,52%,1);
   background-image:
-  radial-gradient(at 92% 83%, hsla(234,61%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 75% 31%, hsla(3,87%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 68% 40%, hsla(318,98%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 9% 28%, hsla(78,62%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 76% 60%, hsla(208,63%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 55% 78%, hsla(1,64%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 99% 99%, hsla(42,70%,2%,1) 0px, transparent 50%);
+  radial-gradient(at 8% 38%, hsla(329,61%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, hsla(20,86%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
+
+
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
@@ -153,6 +154,7 @@ padding: 15px 45px;
     0px 0px 6px rgb(57, 52, 52),
     0px 0px 10px rgba(0, 0, 0, 0.247),
     1px 1px 6px rgba(35, 34, 35, 0.444);
+    margin-left: 20px;
     // text-align: center;
     // display: inline-block;
     border-radius: 25px;
@@ -162,18 +164,64 @@ padding: 15px 45px;
   }
 
 .group-card {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.user-name {
-  margin-right: 10px;
-}
-
-.clipboard-field {
-  width: 30%;
+  flex-grow: 0;
+  background-image: rgba(255, 255, 255, 0.091);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 10px;
 }
 
+.btn-enter-game {
+  a {
+    color: rgb(255, 255, 255);
+  }
+  background-color:rgb(0, 13, 255);
+  background-image:
+  radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, rgb(128, 241, 103) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, rgb(0, 251, 255) 0px, transparent 50%);
 
+
+    padding: 10px 45px;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 100% auto;
+    color: white;
+    box-shadow: 0 0 20px #f209d7;
+    text-shadow:
+    0px 0px 6px rgb(57, 52, 52),
+    0px 0px 10px rgba(0, 0, 0, 0.247),
+    1px 1px 6px rgba(35, 34, 35, 0.444);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline;
+   border-radius: 25px;
+
+}
+
+
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.user-name {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-style: italic;
+  font-weight: bolder;
+
+}
+
+
+.clipboard-field {
+  width: 30%;
+  border-radius: 25px;
+
+}

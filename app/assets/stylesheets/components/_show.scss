@@ -8,8 +8,7 @@
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 10px;
   padding-bottom: 20%;
-  margin-top: 70px;
-  margin-bottom: 20px;
+  margin-top:-70px;
   h2 {
     padding: 20px;
   }
@@ -19,24 +18,18 @@
   text-align: center;
   img {
     width: 30%;
-    margin-top: 36px;
+    margin-top: 60px;
   }
 }
 
 .set-dial-btn {
   a {
-    color: purple;
+    color: rgb(255, 255, 255);
   }
-  background-color:#99ffe9;
-  background-image:
-  radial-gradient(at 55% 11%, hsla(113,89%,60%,1) 0px, transparent 50%),
-  radial-gradient(at 88% 75%, hsla(184,77%,60%,1) 0px, transparent 50%),
-  radial-gradient(at 66% 11%, hsla(260,81%,69%,1) 0px, transparent 50%),
-  radial-gradient(at 54% 23%, hsla(310,77%,71%,1) 0px, transparent 50%),
-  radial-gradient(at 27% 37%, hsla(204,88%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 83% 95%, hsla(356,99%,73%,1) 0px, transparent 50%),
-  radial-gradient(at 98% 70%, hsla(97,82%,72%,1) 0px, transparent 50%);
-
+  background-color:hsla(359,100%,50%,1);
+background-image:
+radial-gradient(at 74% 65%, hsla(131,100%,50%,1) 0px, transparent 50%),
+radial-gradient(at 39% 23%);
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
@@ -46,7 +39,7 @@
     // 0px 0px 6px rgb(57, 52, 52),
     // 0px 0px 10px rgba(0, 0, 0, 0.247),
     // 1px 1px 6px rgba(35, 34, 35, 0.444);
-    padding: 10px 20px;
+    padding: 5px 5px;
     text-align: center;
     display: inline-block;
     margin: 4px 2px;

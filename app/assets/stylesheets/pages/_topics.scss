@@ -11,22 +11,38 @@
 }
 
 .topic-card {
+  flex-grow: 0;
+  background-image: rgba(255, 255, 255, 0.091);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 1px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 10px;
   width: 100%;
   height: auto;
-  //margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
   a:link, h3 {
     color: white;
   }
 }
 
 .topic-card:hover {
-  background-color: #6cacf7;
+  background-color:hsla(256,89%,56%,1);
+  background-image:
+  radial-gradient(at 17% 46%, hsla(188,72%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 73%, hsla(266,69%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 35% 48%, hsla(264,61%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 52% 96%, hsla(332,81%,68%,1) 0px, transparent 50%),
+  radial-gradient(at 83% 22%, hsla(270,62%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 60% 2%, hsla(158,93%,66%,1) 0px, transparent 50%);
+
+
 }
 
 a:link {
@@ -34,22 +50,22 @@ a:link {
 }
 
 .topic-image {
-  width: 38%;
+  width: 30%;
   height: auto;
   border-radius: 5px;
 }
 
 .delete {
-  background-color:hsla(359,100%,50%,1);
+  background-color:hsla(0,100%,50%,1);
   background-image:
-  radial-gradient(at 45% 42%, hsla(20,96%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 74% 28%, hsla(54,11%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 73% 90%, hsla(161,83%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 77% 43%, hsla(182,97%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 28% 30%, hsla(257,63%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 68% 61%, hsla(85,76%,5%,1) 0px, transparent 50%),
-  radial-gradient(at 87% 3%, hsla(124,99%,5%,1) 0px, transparent 50%);
+  radial-gradient(at 40% 20%, hsla(328,100%,50%,0.61) 0px, transparent 50%),
+  radial-gradient(at 80% 0%, hsla(302,100%,54%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 50%, hsla(359,100%,54%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(310,100%,54%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 100%, hsla(359,100%,54%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(315,72%,54%,1) 0px, transparent 50%);
     padding: 15px 45px;
+    font-size: 30px;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
@@ -75,32 +91,35 @@ a:link {
     text-decoration: none;
 }
 
-.btn-enter-game {
-  background-color:hsla(239,100%,50%,1);
+  .btn-enter-game {
+    background-color:rgb(0, 13, 255);
   background-image:
-  radial-gradient(at 92% 83%, hsla(234,61%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 75% 31%, hsla(3,87%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 68% 40%, hsla(318,98%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 9% 28%, hsla(78,62%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 76% 60%, hsla(208,63%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 55% 78%, hsla(1,64%,2%,1) 0px, transparent 50%),
-  radial-gradient(at 99% 99%, hsla(42,70%,2%,1) 0px, transparent 50%);
-    padding: 15px 45px;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 20px #2009F2;
-    text-shadow:
-    0px 0px 6px rgb(57, 52, 52),
-    0px 0px 10px rgba(0, 0, 0, 0.247),
-    1px 1px 6px rgba(35, 34, 35, 0.444);
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    border-radius: 10px;
-    a:link {
-      color: white !important;
-    }
-}
+  radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, rgb(57, 230, 233) 0px, transparent 50%);
+
+      padding: 10px 45px;
+      font-size: 12px;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 100% auto;
+      color: white;
+      box-shadow: 0 0 20px #2009f2;
+      text-shadow:
+      0px 0px 6px rgb(57, 52, 52),
+      0px 0px 10px rgba(0, 0, 0, 0.247),
+      1px 1px 6px rgba(35, 34, 35, 0.444);
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+     margin-left: 120px;
+     margin-bottom: 20px;
+     border-radius: 20px;
+  }
+
+
+  a:link {
+    color: #fff;
+    text-decoration: none;
+  }
