@@ -59,7 +59,7 @@
                   <button id="copy-btn" class="btn btn-sm btn-primary" data-action="click->clipboard#copy">Copy</button>
                 </div>
           <div data-group-update-subscription-target="groups" class="d-flex mt-1">
-                <p class="user-name">Who's in:</p>
+                <p class="user-name">SYNCED IN:</p>
                 <% group.group_subscriptions.each do |gs|%>
                 <div class='user-name'> <p><%= gs.user.name %>, </p> </div>
                 <% end %>
@@ -73,7 +73,7 @@
                     <%#  <div class="delete">%>
                       <%#= link_to "Delete", group_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
                     <%#  </div>%>
-                    <button class="btn btn-outline-primary mb-2" data-action="click->topics#show" data-topics-target="button">Choose a topic</button>
+                    <button class="btn btn-outline-primary mb-2" data-action="click->topics#show" data-topics-target="button">Choose topic</button>
                     <div data-topics-target="topicsMenu" class="d-none">
                       <%= render 'topics', group: group %>
                     </div>
