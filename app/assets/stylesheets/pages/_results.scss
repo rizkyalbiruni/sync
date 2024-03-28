@@ -5,6 +5,7 @@
 }
 
 .result-card {
+  padding: 5px;
   width: 250px;
   margin: 10px;
   border: 1px solid #ccc;
@@ -14,8 +15,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+background: rgba(255, 0, 175, 0.03);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(18.9px);
+-webkit-backdrop-filter: blur(18.9px);
+border: 1px solid rgba(255, 0, 175, 1);
+
 }
 
 .my-result {
-  background-color: rgb(48, 48, 48);
+  padding: 5px;
+  background: rgba(35, 8, 27, 0.54);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(18.9px);
+-webkit-backdrop-filter: blur(18.9px);
+border: 1px solid rgba(35, 8, 27, 1);
 }

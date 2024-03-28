@@ -2,8 +2,8 @@
   font-family: $headers-font;
   font-size: 16px;
   position: center;
-  background-color: rgb(0, 0, 0);
-  color: white
+  color: white;
+  background-color: rgb(48, 48, 48);
 }
 
 .modal-header {
@@ -11,7 +11,11 @@
   font-size: 16px;
   position: center;
   background-color: rgb(0, 0, 0);
-  color: white
+  color: #ffffff;
+  .h5 {
+    text-align: center;
+  }
+
 }
 
 .modal-footer {

@@ -52,11 +52,9 @@
 
 <%# game over %>
 <% if @game.game_finished? %>
-<div class="final-result-btn">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <button type="button" class="final-result-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Final Results
   </button>
-</div>
 <%= render 'pages/modal'%>
 <% end %>
 
@@ -84,7 +82,7 @@
       placeholder: "Message ##{@group.name}",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <%= f.submit ">", class: "btn send-btn mb-3" %>
   <% end %>
   </div>
 <% end %>

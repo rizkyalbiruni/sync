@@ -35,15 +35,24 @@
   a {
     color: rgb(255, 255, 255);
   }
-  background-color:hsla(359,100%,50%,1);
-background-image:
-radial-gradient(at 74% 65%, hsla(131,100%,50%,1) 0px, transparent 50%),
-radial-gradient(at 39% 23%);
+  background-color:hsla(246,100%,52%,1);
+  background-image:
+  radial-gradient(at 8% 38%, hsla(329,61%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, hsla(20,86%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
+
+
+    padding: 10px 45px;
+    font-size: 12px;
     text-transform: uppercase;
     transition: 0.5s;
-    background-size: 200% auto;
+    background-size: 100% auto;
     color: white;
-    box-shadow: 0 0 20px #020014;
+    box-shadow: 0 0 20px #2009f2;
+
+
+
     // text-shadow:
     // 0px 0px 6px rgb(57, 52, 52),
     // 0px 0px 10px rgba(0, 0, 0, 0.247),
@@ -75,16 +84,46 @@ border-radius: 25px;
 
     text-align: center;
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     // margin: 4px 2px;
     margin-left: 80px;
     width: 60%;
 }
 
 .final-result-btn {
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   // button {
   //   display
   // }
+  text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    // margin: 4px 2px;
+    margin-left: 65px;
+    width: 60%;
+
+  background-color:#ff99fa;
+    background-image:
+    radial-gradient(at 63% 40%, hsla(259,100%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 21% 70%, hsla(288,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 27% 89%, hsla(57,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 32% 86%, hsla(206,100%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 38% 21%, hsla(284,100%,68%,1) 0px, transparent 50%),
+    radial-gradient(at 79% 24%, hsla(308,100%,72%,1) 0px, transparent 50%),
+    radial-gradient(at 58% 96%, hsla(250,100%,77%,1) 0px, transparent 50%);
+padding: 10px 12px;
+border-radius: 25px;
+}
+
+.send-btn {
+  background-color:hsla(246,100%,52%,1);
+  background-image:
+  radial-gradient(at 8% 38%, hsla(329,61%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, hsla(20,86%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
 }
