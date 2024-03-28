@@ -76,13 +76,12 @@ a:link {
 }
 
   .btn-enter-game {
-    background-color:hsla(246,100%,52%,1);
-    background-image:
-    radial-gradient(at 8% 38%, hsla(329,61%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 94% 11%, hsla(20,86%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 45% 71%, hsla(265,81%,60%,1) 0px, transparent 50%);
-
+    background-color:rgb(0, 13, 255);
+  background-image:
+  radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, rgb(57, 230, 233) 0px, transparent 50%);
 
       padding: 10px 45px;
       font-size: 12px;
@@ -98,8 +97,9 @@ a:link {
       padding: 10px 20px;
       text-align: center;
       display: inline-block;
-     margin: 4px 2px;
-     border-radius: 25px;
+     margin-left: 120px;
+     margin-bottom: 20px;
+     border-radius: 20px;
   }
 
 
