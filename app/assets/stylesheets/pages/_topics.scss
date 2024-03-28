@@ -11,22 +11,38 @@
 }
 
 .topic-card {
+  flex-grow: 0;
+  background-image: rgba(255, 255, 255, 0.091);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 1px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 10px;
   width: 100%;
   height: auto;
-  //margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
   a:link, h3 {
     color: white;
   }
 }
 
 .topic-card:hover {
-  background-color: #6cacf7;
+  background-color:hsla(256,89%,56%,1);
+  background-image:
+  radial-gradient(at 17% 46%, hsla(188,72%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 73%, hsla(266,69%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 35% 48%, hsla(264,61%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 52% 96%, hsla(332,81%,68%,1) 0px, transparent 50%),
+  radial-gradient(at 83% 22%, hsla(270,62%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 60% 2%, hsla(158,93%,66%,1) 0px, transparent 50%);
+
+
 }
 
 a:link {
@@ -34,7 +50,7 @@ a:link {
 }
 
 .topic-image {
-  width: 38%;
+  width: 30%;
   height: auto;
   border-radius: 5px;
 }
