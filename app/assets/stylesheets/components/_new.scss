@@ -2,18 +2,18 @@
   text-align: center;
   button {
     a {
-      color: purple;
+      color: rgb(255, 255, 255);
     }
     width: 100%;
-    background-color:#99ffe9;
+    background-color:#9331fc;
     background-image:
-    radial-gradient(at 55% 11%, hsla(113,89%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 88% 75%, hsla(184,77%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 66% 11%, hsla(260,81%,69%,1) 0px, transparent 50%),
-    radial-gradient(at 54% 23%, hsla(310,77%,71%,1) 0px, transparent 50%),
-    radial-gradient(at 27% 37%, hsla(204,88%,68%,1) 0px, transparent 50%),
-    radial-gradient(at 83% 95%, hsla(356,99%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 98% 70%, hsla(97,82%,72%,1) 0px, transparent 50%);
+    radial-gradient(at 55% 11%, rgb(244, 62, 62) 0px, transparent 50%),
+    radial-gradient(at 88% 75%, rgb(255, 0, 208) 0px, transparent 50%),
+    radial-gradient(at 66% 11%, rgb(255, 213, 0) 0px, transparent 50%),
+    radial-gradient(at 54% 23%, rgb(255, 255, 0) 0px, transparent 50%),
+    radial-gradient(at 27% 37%, rgb(0, 255, 34) 0px, transparent 50%),
+    radial-gradient(at 83% 95%, rgb(0, 238, 255) 0px, transparent 50%),
+    radial-gradient(at 98% 70%, rgb(0, 13, 255) 0px, transparent 50%);
 
       text-transform: uppercase;
       transition: 0.5s;
@@ -52,30 +52,43 @@
 .topic-icon {
   img {
     padding-bottom: 80px;
+    text-shadow: 1px 1px 2px rgb(243, 112, 255), 0 0 25px rgb(221, 0, 255), 0 0 5px darkblue;
   }
 }
 
 .dial-number-left {
+  border-radius: 100%;
+  font-size: small;
   font-weight: bolder;
-  background: #FF5352;
-  background: -moz-radial-gradient(center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
-  background: -webkit-radial-gradient(center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
-  background: radial-gradient(ellipse at center, #FF5352 0%, #CB0A0A 0%, #FBFF2E 100%);
-  width: 84px;
+  text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px blue, 0 0 5px darkblue;
+  background: #ebffe6;
+background: -moz-radial-gradient(center, #ffffff 0%, #ff0000 94%, #9e040f 100%);
+background: -webkit-radial-gradient(center, #ff00ea 0%, #f871ff 94%, #ff8000 100%);
+background: radial-gradient(ellipse at center, #ff8400 0%, #eb1010 94%, #fff260 100%);
+width: 28px;
+height: 25px;
+padding: 15px;
   h3 {
     color: black;
+
   }
 }
 
 .dial-number-right {
+  border-radius: 100%;
+  font-size: small;
   font-weight: bolder;
-  background: #45FF0F;
-background: -moz-radial-gradient(center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
-background: -webkit-radial-gradient(center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
-background: radial-gradient(ellipse at center, #45FF0F 0%, #10D9EB 94%, #15FF00 100%);
-  width: 84px;
+  text-shadow: 1px 1px 2px rgb(0, 255, 85), 0 0 25px blue, 0 0 5px darkblue;
+  background: #ebffe6;
+background: -moz-radial-gradient(center, #ebefea 0%, #cdffbd 94%, #2effe3 100%);
+background: -webkit-radial-gradient(center, #37ff00 0%, #00ff33 94%, #15FF00 100%);
+background: radial-gradient(ellipse at center, #bbf477 0%, #19c0aa 94%, #a0ff97 100%);
+  width: 28px;
+  height: 25px;
+  padding: 15px;
   h3 {
-    color: black;
+    color: rgb(0, 0, 0);
+
   }
 }
 
@@ -84,6 +97,7 @@ background: radial-gradient(ellipse at center, #45FF0F 0%, #10D9EB 94%, #15FF00 
   padding: none;
   outline: none;
   font-size: 34px;
+  text-shadow: 1px 1px 2px rgb(0, 255, 85), 0 0 25px blue, 0 0 5px darkblue;
 }
 
 #set_dial_setter_word {
