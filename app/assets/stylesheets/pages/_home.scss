@@ -174,17 +174,43 @@ p {
   border-radius: 10px;
 }
 
-.btn-enter-game {
-  a {
-    color: rgb(255, 255, 255);
-  }
-  background-color:rgb(0, 13, 255);
-  background-image:
-  radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
-  radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
-  radial-gradient(at 11% 6%, rgb(128, 241, 103) 0px, transparent 50%),
-  radial-gradient(at 45% 71%, rgb(0, 251, 255) 0px, transparent 50%);
+// .btn-enter-game {
+//   a {
+//     color: rgb(255, 255, 255);
+//   }
+//   background-color:rgb(0, 13, 255);
+//   background-image:
+//   radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
+//   radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
+//   radial-gradient(at 11% 6%, rgb(128, 241, 103) 0px, transparent 50%),
+//   radial-gradient(at 45% 71%, rgb(0, 251, 255) 0px, transparent 50%);
 
+
+//     //padding: 10px 45px;
+//     font-size: 12px;
+//     text-transform: uppercase;
+//     transition: 0.5s;
+//     background-size: 100% auto;
+//     color: white;
+//     box-shadow: 0 0 20px #f209d7;
+//     text-shadow:
+//     0px 0px 6px rgb(57, 52, 52),
+//     0px 0px 10px rgba(0, 0, 0, 0.247),
+//     1px 1px 6px rgba(35, 34, 35, 0.444);
+//     padding: 10px 20px;
+//     text-align: center;
+//     display: inline;
+//     border-radius: 25px;
+
+// }
+
+.btn-enter-game {
+  background-color:rgb(0, 13, 255);
+background-image:
+radial-gradient(at 8% 38%, rgb(94, 223, 178) 0px, transparent 50%),
+radial-gradient(at 94% 11%, rgb(0, 5, 149) 0px, transparent 50%),
+radial-gradient(at 11% 6%, hsla(109,91%,60%,1) 0px, transparent 50%),
+radial-gradient(at 45% 71%, rgb(57, 230, 233) 0px, transparent 50%);
 
     padding: 10px 45px;
     font-size: 12px;
@@ -192,16 +218,18 @@ p {
     transition: 0.5s;
     background-size: 100% auto;
     color: white;
-    box-shadow: 0 0 20px #f209d7;
+    box-shadow: 0 0 20px #2009f2;
     text-shadow:
     0px 0px 6px rgb(57, 52, 52),
     0px 0px 10px rgba(0, 0, 0, 0.247),
     1px 1px 6px rgba(35, 34, 35, 0.444);
     padding: 10px 20px;
     text-align: center;
-    display: inline;
-   border-radius: 25px;
-
+    display: inline-block;
+   margin-left: 90px;
+   margin-bottom: 20px;
+   border-radius: 20px;
+ 
 }
 
 

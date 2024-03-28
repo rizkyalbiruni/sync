@@ -5,16 +5,14 @@
       color: purple;
     }
     width: 100%;
-    background-color:#99ffe9;
-    background-image:
-    radial-gradient(at 55% 11%, hsla(113,89%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 88% 75%, hsla(184,77%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 66% 11%, hsla(260,81%,69%,1) 0px, transparent 50%),
-    radial-gradient(at 54% 23%, hsla(310,77%,71%,1) 0px, transparent 50%),
-    radial-gradient(at 27% 37%, hsla(204,88%,68%,1) 0px, transparent 50%),
-    radial-gradient(at 83% 95%, hsla(356,99%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 98% 70%, hsla(97,82%,72%,1) 0px, transparent 50%);
-
+    background-color:rgb(255, 0, 0);
+  background-image:
+  radial-gradient(at 8% 38%, rgb(255, 28, 251) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, rgb(255, 94, 0) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, rgb(246, 255, 0) 0px, transparent 50%),
+  radial-gradient(at 45% 71%, rgb(43, 227, 1) 0px, transparent 50%),
+  radial-gradient(at 94% 11%, rgb(0, 255, 229) 0px, transparent 50%),
+  radial-gradient(at 11% 6%, rgb(0, 8, 255) 0px, transparent 50%);
       text-transform: uppercase;
       transition: 0.5s;
       background-size: 200% auto;
@@ -102,4 +100,11 @@ border: 3px solid rgba(255, 0, 220, 0.68);
 
  }
 
+}
+
+#setter-value-number {
+  font-size: 48px;
+  margin-bottom: 54px;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(0, 234, 255), 0 0 5px rgba(208, 0, 255, 0.886);
 }

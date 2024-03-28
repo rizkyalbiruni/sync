@@ -15,7 +15,7 @@
   <%= image_tag "topics/#{@game.topic.topic.downcase}.png", class: "topic-image" %>
 </div>
 <div class="player-box">
-  <h2><i class="fa-solid fa-users"></i></h2>
+  <h2><img src="https://i.ibb.co/CWqMdrF/pngwing-com-8.png" alt="pngwing-com-8" border="0"></i></h2>
 
   <p> You: <%= @user.game_points(@game)%> points</p>
 
@@ -31,7 +31,7 @@
 
   <% unless @my_set_dial.present? && @my_set_dial.setter_word.present? %>
     <div class="set-dial-btn">
-      <%= link_to "Set your dial", new_game_set_dial_path(@game), method: :get %>
+      <%= link_to "start", new_game_set_dial_path(@game), method: :get %>
     </div>
   <%end %>
 
@@ -40,7 +40,9 @@
 <% if @set_dials.count == @users.count  %>
   <% next_guess = current_user.next_dial_id_to_guess(@game)%>
     <% if next_guess %>
-      <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
+      <div class="next-guess-btn">
+        <%= link_to "Next Guess", new_set_dial_dial_guess_path(next_guess) %>
+      </div>
     <%end%>
       <br>
         <%# display of results %>
@@ -50,9 +52,11 @@
 
 <%# game over %>
 <% if @game.game_finished? %>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Final Results
-</button>
+<div class="final-result-btn">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Final Results
+  </button>
+</div>
 <%= render 'pages/modal'%>
 <% end %>
 
