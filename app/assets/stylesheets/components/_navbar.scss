@@ -7,6 +7,10 @@ background: transparent
 
 }
 
+.navbar {
+  --bs-navbar-toggler-border-color: none;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
   background-image: rgba(255, 255, 255, 0.091);
@@ -30,7 +34,16 @@ background: transparent
 .navbar-toggler-icon, .navbar-toggler {
   color: none!important;
   margin-top: 27px;
+  border: none !important;
+  outline: none !important;
+    &:focus,
+    &:active,
+    &-icon:focus {
+      outline: none !important;
+      border: none !important;
+    }
 }
+
 
 #home-img {
 img { width: 40px;

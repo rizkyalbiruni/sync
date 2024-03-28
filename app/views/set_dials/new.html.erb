@@ -24,7 +24,7 @@
   </div>
 </div>
   <div data-setdial-target="setterValue" class="d-none">
-    <h1> <%=@setter_value %> </h1>
+    <h1 id="setter-value-number"> <%=@setter_value %> </h1>
   </div>
 
   <div class='d-none' data-setdial-target='setterWordForm'>
@@ -35,7 +35,9 @@
       <%= f.input :setter_value, input_html: {value: @setter_value}, as: :hidden%>
       <%= f.input :setter_word, label: "Your answer based on the number" %>
       <br>
-      <%= f.submit "✅", id: "check" %>
+      <%= f.submit "✅", id: "check" do %>
+        <%= image_tag "https://i.ibb.co/4WkwDJn/pngwing-com-9.png"%>
+      <% end %>
     <% end %>
   </div>
 

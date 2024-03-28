@@ -1,17 +1,32 @@
-<p> <%= @topic.topic %> </p>
+<div class='new-dial-guess-container'>
+  <div class="topic-icon">
+    <h2></h2>
+    <%= image_tag "topics/#{@topic.topic.downcase}.png", class: "topic-image-set-dial" %>
+  </div>
 
-<h1> Where do you think <%=@setter %> ranks <%= @setter_word %> ?</h1>
+  <p id="set-dial-text"> Where do you think <%=@setter %> ranks <%= @setter_word %> ?</p>
+
+  <div class="dial-box">
+    <div class='dial-item'>
+      <h2> <%= @left %></h2>
+      <div class="dial-number-left">
+        <h3>0</h3>
+      </div>
+    </div>
+    <div class='dial-item'>
+      <h2><%= @right %></h2>
+      <div class="dial-number-right">
+        <h3>100</h3>
+      </div>
+    </div>
+  </div>
 
 
-
-<h2> <%= @left %> (0) <br><-><br>(100) <%= @right %> </h2>
-
-<p> Type your dial guess </p>
-
-<%= simple_form_for [@set_dial, @dial_guess] do |f|%>
-<% f.input :set_dial, input_html: {value: @set_dial.id}, as: :hidden %>
-<% f.input :points, input_html: {value: @points}, as: :hidden%>
-<%= f.input :guessed_value %>
-<br>
-<%= f.submit "Submit" %>
-<% end %>
+  <%= simple_form_for [@set_dial, @dial_guess], id: 'form-dial' do |f|%>
+  <% f.input :set_dial, input_html: {value: @set_dial.id}, as: :hidden %>
+  <% f.input :points, input_html: {value: @points}, as: :hidden%>
+  <%= f.input :guessed_value, label: false %>
+  <br>
+  <%= f.submit "✅", id: "check2" %>
+  <% end %>
+</div>

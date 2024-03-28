@@ -1,0 +1,61 @@
+.new-dial-guess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.topic-icon {
+  .topic-image-set-dial {
+    padding-bottom: 40px;
+  }
+}
+
+#set-dial-text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#dial_guess_guessed_value {
+  width: 50%;
+  // display: flex;
+  margin: 0 auto;
+  background: rgba(255, 0, 220, 0.05);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 3px solid rgba(255, 0, 220, 0.68);
+color: white;
+
+}
+
+#check2 {
+  background: transparent;
+  padding: none;
+  outline: none;
+  font-size: 34px;
+  border: none;
+//  margin-left: 154px;
+}
+
+.dial-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_dial_guess {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
