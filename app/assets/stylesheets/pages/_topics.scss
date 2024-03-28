@@ -1,98 +1,50 @@
-// .topic-cards {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-.topic-cards {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 5%;
-}
-
-.topic-card {
-  flex-grow: 0;
-  background-image: rgba(255, 255, 255, 0.091);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 1px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  margin-bottom: 10px;
-  a:link, h3 {
-    color: white;
+ // .topic-cards {
+  //  display: flex;
+  //  flex-wrap: wrap;
+  // }
+  .topic-cards {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0 5%;
   }
-}
-
-.topic-card:hover {
-  background-color:hsla(256,89%,56%,1);
-  background-image:
-  radial-gradient(at 17% 46%, hsla(188,72%,66%,1) 0px, transparent 50%),
-  radial-gradient(at 13% 73%, hsla(266,69%,69%,1) 0px, transparent 50%),
-  radial-gradient(at 35% 48%, hsla(264,61%,61%,1) 0px, transparent 50%),
-  radial-gradient(at 52% 96%, hsla(332,81%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 83% 22%, hsla(270,62%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 60% 2%, hsla(158,93%,66%,1) 0px, transparent 50%);
-
-
-}
-
-a:link {
-  text-decoration: none;
-}
-
-.topic-image {
-  width: 30%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.delete {
-  background-color:hsla(0,100%,50%,1);
-  background-image:
-  radial-gradient(at 40% 20%, hsla(328,100%,50%,0.61) 0px, transparent 50%),
-  radial-gradient(at 80% 0%, hsla(302,100%,54%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 50%, hsla(359,100%,54%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(310,100%,54%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 100%, hsla(359,100%,54%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 0%, hsla(315,72%,54%,1) 0px, transparent 50%);
-    padding: 15px 45px;
-    font-size: 30px;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
+  .topic-card {
+   flex-grow: 0;
+   background-image: rgba(255, 255, 255, 0.091);
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 10px );
+   -webkit-backdrop-filter: blur( 1px );
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   border-radius: 10px;
+   width: 100%;
+   height: auto;
+   margin-top: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   text-align: center;
+   transition: background-color 0.3s ease;
+   margin-bottom: 10px;
+   a:link, h3 {
     color: white;
-    box-shadow: 0 0 20px #2009F2;
-    text-shadow:
-    0px 0px 6px rgb(57, 52, 52),
-    0px 0px 10px rgba(0, 0, 0, 0.247),
-    1px 1px 6px rgba(35, 34, 35, 0.444);
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    border-radius: 20px;
-    a:link {
-      color: white;
-    }
-}
-
-.delete:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-}
-
-
+   }
+  }
+  .topic-card:hover {
+   background-color:hsla(256,89%,56%,1);
+   background-image:
+   radial-gradient(at 17% 46%, hsla(188,72%,66%,1) 0px, transparent 50%),
+   radial-gradient(at 13% 73%, hsla(266,69%,69%,1) 0px, transparent 50%),
+   radial-gradient(at 35% 48%, hsla(264,61%,61%,1) 0px, transparent 50%),
+   radial-gradient(at 52% 96%, hsla(332,81%,68%,1) 0px, transparent 50%),
+   radial-gradient(at 83% 22%, hsla(270,62%,76%,1) 0px, transparent 50%),
+   radial-gradient(at 60% 2%, hsla(158,93%,66%,1) 0px, transparent 50%);
+  }
   a:link {
-    color: #fff;
-    text-decoration: none;
+   text-decoration: none;
+  }
+  .topic-image {
+   width: 30%;
+   height: auto;
+   border-radius: 5px;
   }
