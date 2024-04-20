@@ -35,4 +35,4 @@ right click > inspect > any mobile view
 > [!NOTE]
 > Please refresh if you don't receive any response, as the WebSocket may not be fully installed.
 
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+
