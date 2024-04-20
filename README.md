@@ -4,7 +4,7 @@ A multiplayer game that challenges players to predict the position of a hidden n
 
 ## Installation
 
-No installation is needed simply click the link! If you are accessing this app through a large screen change it to any mobile view for the best experience. 
+No installation is needed simply click the [**link!**](https://www.sync.rodeo/) If you are accessing this app through a large screen change it to any mobile view for the best experience. 
 
 ```bash
 right click > inspect > any mobile view
