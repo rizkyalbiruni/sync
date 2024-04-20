@@ -2,7 +2,7 @@
 
 A multiplayer game that challenges players to predict the position of a hidden number within a given range. The game features dynamic gameplay and a chat feature for social interaction after each match.
 
-## Installation
+## Installation :iphone:
 
 No installation is needed simply click the [**link!**](https://www.sync.rodeo/) If you are accessing this app through a large screen change it to any mobile view for best experience. 
 
@@ -11,16 +11,16 @@ right click > inspect > any mobile view
 ```
 
 > [!IMPORTANT]
-> The game is played by 2 players.
+> The game is played by 2 players. :people_holding_hands:
 
-## Usage
+## Get started :muscle:
 
 1. Sign up by clicking green cubic on the right-top of the screen.
 2. One of the players creates a group the other will join via invitation code.
 3. Once the group has 2 players, the player that created the group can choose a topic.
 4. Player who joined can simply press a button to enter the game
 
-## How it's played
+## How it's played :video_game:
 
 - Set: You'll be given a number between two extremes
 
