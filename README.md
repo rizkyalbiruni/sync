@@ -4,14 +4,14 @@ A multiplayer game that challenges players to predict the position of a hidden n
 
 ## Installation
 
-No installation is needed simply click the [**link!**](https://www.sync.rodeo/) If you are accessing this app through a large screen change it to any mobile view for the best experience. 
+No installation is needed simply click the [**link!**](https://www.sync.rodeo/) If you are accessing this app through a large screen change it to any mobile view for best experience. 
 
 ```bash
 right click > inspect > any mobile view
 ```
 
 > [!IMPORTANT]
-> The game needs to be played by 2 players.
+> The game is played by 2 players.
 
 ## Usage
 
@@ -20,7 +20,7 @@ right click > inspect > any mobile view
 3. Once the group has 2 players, the player that created the group can choose a topic.
 4. Player who joined can simply press a button to enter the game
 
-## How it is played
+## How it's played
 
 - Set: You'll be given a number between two extremes
 
@@ -44,4 +44,5 @@ right click > inspect > any mobile view
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
 <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a>
-
+<a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
